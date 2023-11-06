@@ -5,12 +5,13 @@
 /* loader */
 
 .loader {
+    position:absolute;
     width: 100%;
     height: 100%;
     @extend %flex-center;
     font-family: $title-font;
     background:white;
-    animation: hide-loader 2000ms forwards, crescendo 1000ms 2000ms; /*fait diparaitre le loader*/
+    animation: hide-loader 2100ms forwards; /*fait diparaitre le loader*/
     z-index: 100;
       &__lettre {
         width:100%;
@@ -18,7 +19,7 @@
         font-size:2rem;   
         color: #9356DC;
         letter-spacing: 1 rem;
-        animation: flash 2000ms;
+        animation: flash 2000ms, crescendo 2000ms;
         }
     &__lettre:nth-child(1){
         animation-delay: 0.1s;

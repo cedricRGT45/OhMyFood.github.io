@@ -120,15 +120,15 @@ table {
   height: 100%;
   font-family: "Shrikhand", serif;
   background: white;
-  animation: hide-loader 2000ms forwards, crescendo 1000ms 2000ms;
+  animation: hide-loader 2100ms forwards; /*fait diparaitre le loader*/
   z-index: 100;
 }
 .loader__lettre {
+  width: 100%;
   font-size: 2rem;
   color: #9356DC;
-  letter-spacing: 15px;
-  margin-bottom: 150px;
-  animation: flash 2000ms, crescendo 2000ms 1000ms;
+  letter-spacing: 1 rem;
+  animation: flash 2000ms, crescendo 2000ms;
 }
 .loader__lettre:nth-child(1) {
   animation-delay: 0.1s;
@@ -180,7 +180,7 @@ table {
 .header__location {
   width: 100%;
   height: 3.12rem;
-  background: #9356DC;
+  background: #99E2D0;
   gap: 1.06rem;
 }
 .header__location input {
@@ -193,3 +193,4 @@ table {
 /*font-style*/
 /* Comment import ou use des dossiers plutot que des fichiers?*/
 /*Dès lors que je met les fichiers dans des dossiers distincts, les fichiers ne sont plus liés au style.scss*/
+/*bugs vsc, parfois tout va bien et soudainement le css n'est plus compilé*/
