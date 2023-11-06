@@ -1,0 +1,11 @@
+
+@import 'reset';
+@import 'keyframes';
+@import 'loader';
+@import 'header';
+@import 'variables';
+@import 'typography';   
+
+/* Comment import ou use des dossiers plutot que des fichiers?*/
+/*Dès lors que je met les fichiers dans des dossiers distincts, les fichiers ne sont plus liés au style.scss*/
+/*bugs vsc, parfois tout va bien et soudainement le css n'est plus compilé*/
