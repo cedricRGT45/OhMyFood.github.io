@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <link rel="shortcut icon" href="images/favicon.png"/>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
+    <link rel="shortcut icon" href="assets/images/favicon.png"/>
 </head>
 <body>
 
@@ -27,13 +27,31 @@
 
     <!-- Header -->
     <header class="header">
-        <div class="header__logo">
-            <img src="images/logo/ohmyfood@2x.svg">
-        </div>
+            <i class="fa-solid fa-arrow-left"></i>
+            <div class="header__logo">           
+                <img src="assets/images/logo/ohmyfood@2x.svg">
+            </div>
         <div class="header__location">
-                <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-location-dot"></i>
                 <input type="text" id="location" name="name" required value="Paris, Belleville"/>
         </div>
     </header>
+    <main>
+        <div class="intro-content">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <button class="btn">
+                Explorer nos restaurants
+            </button>
+        </div>
+        <div class="fonctionnement">
+            <h1>Fonctionnement</h1>
+            <div class="fonctionnement__card">
+                <div class="fonctionnement_card_number"><p>1</p></div>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>Choisissez un restaurant</p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

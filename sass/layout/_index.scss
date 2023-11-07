@@ -1,0 +1,58 @@
+@use '../utils/placeholders' as *;
+@use '../base/typography' as *;
+@use '../utils/variables' as *;
+
+/*Intro content*/
+
+.intro-content{
+    width:100%;
+    margin:2.44rem 0 3.56rem 0;
+    @extend %flex-center;
+    flex-direction:column;
+    text-align: center;
+    & h1{
+        margin:0 2.63rem;   
+    }
+    & h1{
+        width:17.18rem;
+    }
+    & p{
+        width:19.68;
+        margin: 0.5rem 1.63rem 1.69rem 2.12rem ;
+        font-family:$text-font;
+        font-family: Roboto;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 300;
+    }
+    }
+
+/*Fonctionnement*/
+
+.fonctionnement{
+    margin:1.25rem;
+    & h1{
+        padding:3rem 0 1.63rem 0;
+    }
+    &__card{
+        width:20.15rem;
+        height:4.52rem;
+        border-radius: 1.25rem;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        @extend %flex-row;
+        gap: 1.3rem;
+    }
+    &_card_number{
+        position: absolute;
+            color:white;
+            font-size: 0.88rem;
+            font-family: $text-font;
+            width:1.5rem;
+            height:1.5rem;
+            border-radius:1.5rem;
+            background:$secondary;
+            @extend %flex-center;
+    }
+}
+
+ 
