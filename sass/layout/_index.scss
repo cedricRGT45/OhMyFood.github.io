@@ -30,29 +30,49 @@
 /*Fonctionnement*/
 
 .fonctionnement{
-    margin:1.25rem;
+    @extend %margin-sections-accueil;
     & h1{
         padding:3rem 0 1.63rem 0;
     }
+ 
     &__card{
-        width:20.15rem;
+        max-width:20rem;
         height:4.52rem;
+        margin:auto;
+        margin-bottom:1.56rem;
+        @extend %flex-center;
+        position:relative;
         border-radius: 1.25rem;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        @extend %flex-row;
         gap: 1.3rem;
+        }
+    &_card p{
+        width:auto;
     }
     &_card_number{
-        position: absolute;
-            color:white;
+            position: absolute;
+            left:-0.75rem;
+            color:$text-white;
             font-size: 0.88rem;
-            font-family: $text-font;
             width:1.5rem;
             height:1.5rem;
             border-radius:1.5rem;
-            background:$secondary;
+            background:$primary;
             @extend %flex-center;
     }
+    
+    & .fa-mobile-screen-button{
+        @extend %accueil-icone;
+        margin-left:1.5rem;
+    }
+    & .fa-list-ul{
+        @extend %accueil-icone;
+    }
+    & .fa-store{
+        color: $primary;
+    }
 }
+
+
 
  
