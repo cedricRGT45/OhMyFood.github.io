@@ -1,78 +1,112 @@
-@use '../utils/placeholders' as *;
-@use '../base/typography' as *;
-@use '../utils/variables' as *;
+@use "../utils/placeholders" as *;
+@use "../base/typography" as *;
+@use "../utils/variables" as *;
 
 /*Intro content*/
 
-.intro-content{
-    width:100%;
-    margin:2.44rem 0 3.56rem 0;
-    @extend %flex-center;
-    flex-direction:column;
-    text-align: center;
-    & h1{
-        margin:0 2.63rem;   
-    }
-    & h1{
-        width:17.18rem;
-    }
-    & p{
-        width:19.68;
-        margin: 0.5rem 1.63rem 1.69rem 2.12rem ;
-        font-family:$text-font;
-        font-family: Roboto;
-        font-size: 1.125rem;
-        font-style: normal;
-        font-weight: 300;
-    }
-    }
+.intro-content {
+  width: 100%;
+  margin: 2.44rem 0 3.56rem 0;
+  @extend %flex-row-center;
+  flex-direction: column;
+  text-align: center;
+  & h1 {
+    margin: 0 2.63rem;
+    width: 17.18rem;
+  }
+  & p {
+    width: 19.68;
+    margin: 0.5rem 1.63rem 1.69rem 2.12rem;
+  }
+}
 
 /*Fonctionnement*/
 
-.fonctionnement{
-    @extend %margin-sections-accueil;
-    & h1{
-        padding:3rem 0 1.63rem 0;
-    }
- 
-    &__card{
-        max-width:20rem;
-        height:4.52rem;
-        margin:auto;
-        margin-bottom:1.56rem;
-        @extend %flex-center;
-        position:relative;
-        border-radius: 1.25rem;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        gap: 1.3rem;
-        }
-    &_card p{
-        width:auto;
-    }
-    &_card_number{
-            position: absolute;
-            left:-0.75rem;
-            color:$text-white;
-            font-size: 0.88rem;
-            width:1.5rem;
-            height:1.5rem;
-            border-radius:1.5rem;
-            background:$primary;
-            @extend %flex-center;
-    }
-    
-    & .fa-mobile-screen-button{
-        @extend %accueil-icone;
-        margin-left:1.5rem;
-    }
-    & .fa-list-ul{
-        @extend %accueil-icone;
-    }
-    & .fa-store{
-        color: $primary;
-    }
+.fonctionnement {
+  @extend %margin-sections-accueil;
+  & h1 {
+    padding: 3rem 0 1.63rem 0;
+  }
+
+  &__card {
+    max-width: 20rem;
+    height: 4.52rem;
+    margin: auto;
+    margin-bottom: 1.56rem;
+    @extend %flex-row-center;
+    position: relative;
+    border-radius: 1.25rem;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    gap: 1.3rem;
+  }
+  &_card p {
+    width: auto;
+  }
+  &_card_number {
+    position: absolute;
+    left: -0.75rem;
+    color: $text-white;
+    font-size: 0.88rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+    background: $primary;
+    @extend %flex-row-center;
+  }
+
+  & .fa-mobile-screen-button {
+    @extend %accueil-icone;
+    margin-left: 1.5rem;
+  }
+  & .fa-list-ul {
+    @extend %accueil-icone;
+  }
+  & .fa-store {
+    color: $primary;
+  }
 }
 
+/* Cartes des restaurants*/
 
+.restaurants {
+  background: $accueil_card-bgcolor;
+  h2 {
+    padding: 2rem 0;
+  }
+  &__cards {
+    @extend %flex-column-center;
+    gap: 1.12rem;
+    &-card {
+      width: 90%;
+      max-width: 21.62rem;
+      height: 15.68rem;
+      margin: 2.19rem;
+      background-color: $text-white;
+      border-radius: $restaurant-cards-br;
+    }
 
- 
+    &-photo {
+      width: 100%;
+      height: 10.9rem;
+      border-radius: $restaurant-cards-br;
+    }
+    &-content {
+      @extend %flex-row-center;
+      justify-content: space-between;
+      padding: 1rem 1.56rem 0.75rem 0.81rem;
+    }
+  }
+}
+
+.outlined-heart {
+  color: black;
+}
+
+.filled-heart {
+  color: $button-gradient-1;
+}
+
+.hidden {
+  display: none;
+  outline: none;
+}

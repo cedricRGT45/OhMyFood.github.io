@@ -41,11 +41,19 @@ table {
 /*colors*/
 /*Button*/
 /*breakpoints*/
+/*cards restaurant*/
+/*define the restaurants cards border-radius*/
 /*Cards accueil*/
 /*Mixin for pseudo-elements*/
-.intro-content, .fonctionnement__card, .fonctionnement_card_number, .header__logo, .header__location, .loader, .loader__lettre {
+.intro-content, .fonctionnement__card, .fonctionnement_card_number, .restaurants__cards-content, .header__location, .loader, .loader__lettre {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.restaurants__cards, .header {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -56,7 +64,7 @@ table {
 .fonctionnement .fa-mobile-screen-button, .fonctionnement .fa-list-ul {
   width: 0.81rem;
   height: 1.24rem;
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 
 /*Loader'keyframes*/
@@ -73,16 +81,16 @@ table {
 }
 @keyframes flash {
   0% {
-    color: #FF79DA;
-    text-shadow: 0 0 7px #FF79DA;
+    color: #ff79da;
+    text-shadow: 0 0 7px #ff79da;
   }
   70% {
-    color: #9356DC;
-    text-shadow: #FF79DA;
+    color: #9356dc;
+    text-shadow: 0 0 7px #ff79da;
   }
   100% {
-    color: #9356DC;
-    text-shadow: 0 0 7px #9356DC;
+    color: #9356dc;
+    text-shadow: 0 0 7px #9356dc;
   }
 }
 @keyframes hide-loader {
@@ -94,11 +102,48 @@ table {
     opacity: 0;
   }
 }
+/*Animation Bouton like*/
+@keyframes heartBtn-filling {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes heartBtn-outlines-fading {
+  0%, 50% {
+    opacity: 1;
+  }
+  70%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes heartBtn-emptying {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 /*font-style*/
-h1 {
+h1,
+h2 {
   font-family: Roboto;
   font-size: 1.5rem;
   font-style: normal;
+  font-weight: 700;
+}
+
+H3 {
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
@@ -112,22 +157,26 @@ p {
 /* loader */
 .loader {
   display: none;
-  position: absolute;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   font-family: "Shrikhand", serif;
   background: white;
-  animation: hide-loader 2000ms forwards; /*fait disparaitre le loader*/
+  animation: hide-loader 3000ms forwards; /*fait disparaitre le loader*/
   z-index: 100;
+  margin: 0;
+  overflow: hidden;
   /*Style et animation des lettres*/
 }
 .loader__lettre {
-  width: 100%;
-  height: 100%;
   font-size: 2rem;
-  color: #9356DC;
+  color: #9356dc;
   letter-spacing: 1 rem;
-  animation: flash 2000ms, crescendo 2000ms;
+  animation: flash 3000ms, crescendo 3000ms;
 }
 .loader__lettre:nth-child(1) {
   animation-delay: 0.1s;
@@ -165,13 +214,14 @@ p {
   width: 100%;
 }
 .header__logo {
-  width: 100%;
+  width: 40%;
+  max-width: 10.12rem;
   margin: 0.88rem 0;
 }
 .header__location {
   width: 100%;
   height: 3.12rem;
-  background: #99E2D0;
+  background: #99e2d0;
   font-family: "roboto", sans-serif;
   color: #353535;
   font-weight: 500;
@@ -201,18 +251,11 @@ p {
 }
 .intro-content h1 {
   margin: 0 2.63rem;
-}
-.intro-content h1 {
   width: 17.18rem;
 }
 .intro-content p {
   width: 19.68;
   margin: 0.5rem 1.63rem 1.69rem 2.12rem;
-  font-family: "roboto", sans-serif;
-  font-family: Roboto;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 300;
 }
 
 /*Fonctionnement*/
@@ -240,13 +283,54 @@ p {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 1.5rem;
-  background: #9356DC;
+  background: #9356dc;
 }
 .fonctionnement .fa-mobile-screen-button {
   margin-left: 1.5rem;
 }
 .fonctionnement .fa-store {
-  color: #9356DC;
+  color: #9356dc;
+}
+
+/* Cartes des restaurants*/
+.restaurants {
+  background: #f6f6f6;
+}
+.restaurants h2 {
+  padding: 2rem 0;
+}
+.restaurants__cards {
+  gap: 1.12rem;
+}
+.restaurants__cards-card {
+  width: 90%;
+  max-width: 21.62rem;
+  height: 15.68rem;
+  margin: 2.19rem;
+  background-color: #fff;
+  border-radius: 0.94rem;
+}
+.restaurants__cards-photo {
+  width: 100%;
+  height: 10.9rem;
+  border-radius: 0.94rem;
+}
+.restaurants__cards-content {
+  justify-content: space-between;
+  padding: 1rem 1.56rem 0.75rem 0.81rem;
+}
+
+.outlined-heart {
+  color: black;
+}
+
+.filled-heart {
+  color: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
+.hidden {
+  display: none;
+  outline: none;
 }
 
 /*Style du bouton*/
@@ -256,7 +340,7 @@ p {
   border: none;
   color: #fff;
   border-radius: 1.56rem;
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1;
@@ -271,7 +355,7 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transition: opacity 250ms;
@@ -289,3 +373,19 @@ p {
 .btn:hover:after {
   opacity: 1;
 }
+
+.outlined-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.filled-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */

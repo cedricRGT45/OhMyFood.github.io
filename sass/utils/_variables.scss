@@ -1,32 +1,36 @@
-
-
 /*colors*/
 
-$primary:#9356DC;
-$secondary:#FF79DA;
-$tertiary:#99E2D0;
-$location-bg-color:#99E2D0;
-$footer-bg:#353535;
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$location-bg-color: #99e2d0;
+$footer-bg: #353535;
 $text-white: #fff;
-$accueil-icone-color:#7E7E7E;
-$accueil_card-bgcolor:#F6F6F6;
+$accueil-icone-color: #7e7e7e;
+$accueil_card-bgcolor: #f6f6f6;
 
 /*Button*/
 
-$button-gradient-1:linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-$button-gradient-2:linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+$button-gradient-1: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+$button-gradient-2: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  ),
+  linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
 
-
-$button-border-rad:1.56rem;
+$button-border-rad: 1.56rem;
 
 /*breakpoints*/
 
 $breakpoint-small: 320px;
-$breakpoint-medium:768px;
-$breakpoint-large:1024px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+/*cards restaurant*/
+
+$restaurant-cards-br: 0.94rem; /*define the restaurants cards border-radius*/
 
 /*Cards accueil*/
 
-$--accueil-bg-color:#F6F6F6;
-
-
+$--accueil-bg-color: #f6f6f6;

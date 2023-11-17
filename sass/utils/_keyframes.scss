@@ -1,32 +1,75 @@
-
 /*Loader'keyframes*/
 
 @keyframes crescendo {
-  0%  {opacity:1;}
-  50% {opacity:0.7;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
 }
+
 @keyframes flash {
-    0% {
-        color: #FF79DA;
-        text-shadow: 0 0 7px #FF79DA;
-    }
-    70% {
-        color: #9356DC;
-        text-shadow: #FF79DA;
-    }
-    100% {
-        color: #9356DC ;
-        text-shadow: 0 0 7px #9356DC;
-    }
+  0% {
+    color: #ff79da;
+    text-shadow: 0 0 7px #ff79da;
+  }
+  70% {
+    color: #9356dc;
+    text-shadow: 0 0 7px#ff79da;
+  }
+  100% {
+    color: #9356dc;
+    text-shadow: 0 0 7px #9356dc;
+  }
 }
 @keyframes hide-loader {
   95% {
     opacity: 1;
   }
-  
+
   100% {
     display: none;
     opacity: 0;
+  }
+}
+
+/*Animation Bouton like*/
+
+@keyframes heartBtn-filling {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes heartBtn-outlines-fading {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heartBtn-emptying {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
   }
 }

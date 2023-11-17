@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <title>Oh my Food</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>    
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet" />
     <link rel='stylesheet' type='text/css' media='screen' href='assets/style.css'>
-    <link rel="shortcut icon" href="assets/images/favicon.png"/>
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <script src="https://kit.fontawesome.com/adf26ee57a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <!-- loader's page -->
@@ -26,42 +28,92 @@
     </div>
 
     <!-- Header -->
+
     <header class="header">
-            <i class="fa-solid fa-arrow-left"></i>
-            <div class="header__logo">           
-                <img src="assets/images/logo/ohmyfood@2x.svg">
-            </div>
+        <i class="fa-solid fa-arrow-left"></i>
+        <img class="header__logo" src="assets/images/logo/ohmyfood@2x.svg">
         <div class="header__location">
             <i class="fa-solid fa-location-dot"></i>
-                <input type="text" id="location" name="name" required value="Paris, Belleville"/>
+            <form>
+                <input type="text" id="location" name="name" required value="Paris, Belleville">
+            </form>
         </div>
     </header>
     <main>
-        <div class="intro-content">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <button class="btn">
-                Explorer nos restaurants
-            </button>
+        <div class="hero">
+            <div class="intro-content">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <a href="#">
+                    <button class="btn">
+                        Explorer nos restaurants
+                    </button>
+                </a>
+            </div>
         </div>
-        <div class="fonctionnement">
-            <h1>Fonctionnement</h1>
+        <section class="fonctionnement">
+            <h2>Fonctionnement</h2>
             <div class="fonctionnement__cards">
-              <div class="fonctionnement__card">
-                    <div class="fonctionnement_card_number"><p>1</p></div>
+                <div class="fonctionnement__card">
+                    <div class="fonctionnement_card_number">
+                        <p>1</p>
+                    </div>
                     <i class="fa-solid fa-mobile-screen-button"></i>
                     <p>Choisissez un restaurant</p>
                 </div>
                 <div class="fonctionnement__card">
-                    <div class="fonctionnement_card_number"><p>2</p></div>
-                    <i class="fa-solid fa-list-ul"></i>                <p>Composez votre menu</p>
+                    <div class="fonctionnement_card_number">
+                        <p>2</p>
+                    </div>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p>Composez votre menu</p>
                 </div>
                 <div class="fonctionnement__card">
-                    <div class="fonctionnement_card_number"><p>3</p></div>
-                    <i class="fa-solid fa-store"></i>                <p>Dégustez au restaurant</p>
+                    <div class="fonctionnement_card_number">
+                        <p>3</p>
+                    </div>
+                    <i class="fa-solid fa-store"></i>
+                    <p>Dégustez au restaurant</p>
                 </div>
-              </div>
-        </div>
+            </div>
+        </section>
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <div class="restaurants__cards">
+                <article class="restaurants__cards-card">
+                    <img class="restaurants__cards-photo"
+                        src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="Photographie d'un plat de poisson du restaurant La palette du goût">
+                    <div class="restaurants__cards-content">
+                        <div class="restaurants__cards-txt">
+                            <h3 class="restaurants__card-title">La palette du goût</h3>
+                            <p class="restaurants__card-subtitle">
+                                Ménilmontant
+                            </p>
+                        </div>
+                        <input id="toggle-heart" type="checkbox" />
+                        <label for="toggle-heart"><i class="fa-regular fa-heart outlined-heart"></i>
+                            <i class="fa-solid fa-heart filled-heart"></i>
+                        </label>
+                    </div>
+                </article>
+                <article class=" restaurants__cards-card">
+                    <img class="restaurants__cards-photo"
+                        src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="Photographie d'un plat de poisson du restaurant La palette du goût">
+                    <div class="restaurant__cards-content">
+                        <div class="restaurant__cards-text">
+                            <h3 class="restaurants__card-title">La palette du goût</h3>
+                            <p class="restaurants__card-subtitle">
+                                Ménilmontant
+                            </p>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
     </main>
 </body>
+
 </html>
