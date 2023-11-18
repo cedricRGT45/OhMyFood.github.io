@@ -73,3 +73,51 @@
     transform: scale(0);
   }
 }
+
+/*Animation pour le bouton favoris coeur*/
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 0;
+    scale: 0.3;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    scale: 0.5;
+  }
+  90% {
+    opacity: 1;
+    scale: 1.25;
+  }
+  100% {
+    opacity: 1;
+    scale: 1.15;
+  }
+}
+
+@keyframes spinningOut {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+    scale: 1.5;
+  }
+  10% {
+    transform: rotate(10deg);
+    opacity: 1;
+    scale: 1.25;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    scale: 0.3;
+  }
+}

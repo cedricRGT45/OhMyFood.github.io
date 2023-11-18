@@ -4,21 +4,13 @@ $title-font: "Shrikhand", serif;
 $text-font: "roboto", sans-serif;
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: Roboto;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-}
-
-H3 {
-  font-size: 1.125rem;
   font-weight: 700;
 }
 
 p {
   font-family: Roboto;
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
 }

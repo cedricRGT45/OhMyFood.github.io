@@ -45,6 +45,19 @@ table {
 /*define the restaurants cards border-radius*/
 /*Cards accueil*/
 /*Mixin for pseudo-elements*/
+/*font-style*/
+h1,
+h2,
+h3 {
+  font-family: Roboto;
+  font-weight: 700;
+}
+
+p {
+  font-family: Roboto;
+  font-size: 1rem;
+}
+
 .intro-content, .fonctionnement__card, .fonctionnement_card_number, .restaurants__cards-content, .header__location, .loader, .loader__lettre {
   display: flex;
   justify-content: center;
@@ -57,6 +70,16 @@ table {
   align-items: center;
 }
 
+.footer__nav-link {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
 .fonctionnement {
   margin: 3.56rem 1.25rem;
 }
@@ -65,6 +88,12 @@ table {
   width: 0.81rem;
   height: 1.24rem;
   color: #7e7e7e;
+}
+
+.footer__title {
+  font-family: "Shrikhand", serif;
+  font-size: 1.12rem;
+  font-weight: 400;
 }
 
 /*Loader'keyframes*/
@@ -133,27 +162,50 @@ table {
     transform: scale(0);
   }
 }
-/*font-style*/
-h1,
-h2 {
-  font-family: Roboto;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
+/*Animation pour le bouton favoris coeur*/
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 0;
+    scale: 0.3;
+  }
 }
-
-H3 {
-  font-size: 1.125rem;
-  font-weight: 700;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    scale: 0.5;
+  }
+  90% {
+    opacity: 1;
+    scale: 1.25;
+  }
+  100% {
+    opacity: 1;
+    scale: 1.15;
+  }
 }
-
-p {
-  font-family: Roboto;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
+@keyframes spinningOut {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+    scale: 1.5;
+  }
+  10% {
+    transform: rotate(10deg);
+    opacity: 1;
+    scale: 1.25;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    scale: 0.3;
+  }
 }
-
 /* loader */
 .loader {
   display: none;
@@ -242,6 +294,10 @@ p {
   color: #353535;
 }
 
+main {
+  object-fit: cover;
+}
+
 /*Intro content*/
 .intro-content {
   width: 100%;
@@ -256,10 +312,11 @@ p {
 .intro-content p {
   width: 19.68;
   margin: 0.5rem 1.63rem 1.69rem 2.12rem;
+  font-weight: 300;
 }
 
 /*Fonctionnement*/
-.fonctionnement h1 {
+.fonctionnement h2 {
   padding: 3rem 0 1.63rem 0;
 }
 .fonctionnement__card {
@@ -274,6 +331,7 @@ p {
 }
 .fonctionnement_card p {
   width: auto;
+  font-weight: 500;
 }
 .fonctionnement_card_number {
   position: absolute;
@@ -297,7 +355,7 @@ p {
   background: #f6f6f6;
 }
 .restaurants h2 {
-  padding: 2rem 0;
+  padding: 2rem 1.1rem;
 }
 .restaurants__cards {
   gap: 1.12rem;
@@ -310,27 +368,29 @@ p {
   background-color: #fff;
   border-radius: 0.94rem;
 }
+.restaurants__cards p {
+  font-weight: 300;
+  line-height: 1.5rem;
+}
 .restaurants__cards-photo {
   width: 100%;
   height: 10.9rem;
   border-radius: 0.94rem;
+  object-fit: cover;
+  object-position: center 62%;
 }
 .restaurants__cards-content {
   justify-content: space-between;
-  padding: 1rem 1.56rem 0.75rem 0.81rem;
+  padding: 1rem;
 }
-
-.outlined-heart {
-  color: black;
-}
-
-.filled-heart {
-  color: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+.restaurants__cards-content h2 {
+  font-size: 1.25rem;
 }
 
 .hidden {
-  display: none;
-  outline: none;
+  position: absolute;
+  width: 0px;
+  height: 0px;
 }
 
 /*Style du bouton*/
@@ -374,18 +434,80 @@ p {
   opacity: 1;
 }
 
-.outlined-heart {
+/*Bouton favoris coeur*/
+.Heart {
+  width: 1.35rem;
+  position: relative;
+  cursor: pointer;
+}
+.Heart__likeButton::after {
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-size: 1.37rem;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
+  left: O;
+  opacity: 0;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-font-smoothing: antialiased;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Heart__likeButton .fa-heart {
+  font-size: 1.37rem;
+}
+.Heart input:hover + .Heart__likeButton .fa-heart {
+  scale: 1.15;
+}
+.Heart input + .Heart__likeButton::after {
+  animation: heart-emptying 300ms ease-in-out forwards;
+}
+.Heart input:checked + .Heart__likeButton .fa-heart {
+  animation: fadeOut 700ms forwards;
+}
+.Heart input:checked + .Heart__likeButton::after {
+  animation: fadeIn 700ms ease-in forwards;
+}
+.Heart input:not(:checked) + .Heart__likeButton::after {
+  animation: spinningOut 700ms ease-out;
+}
+.Heart input:not(:checked) + .Heart__likeButton .fa-heart {
+  animation: fadeIn 400ms ease-in forwards;
 }
 
-.filled-heart {
-  position: absolute;
-  top: 0;
-  left: 0;
+.footer {
+  gap: 1rem;
+  padding: 1.38rem 1.56rem;
+  background: #353535;
+}
+.footer__title {
   width: 100%;
-  height: 100%;
-}/*# sourceMappingURL=style.css.map */
+  color: #fff;
+}
+.footer__nav {
+  width: 100%;
+}
+.footer__nav-link {
+  color: #fff;
+  text-decoration: none;
+  gap: 1rem;
+  margin: 0.44rem;
+}
+.footer__nav-linkIcon {
+  width: 1rem;
+}
+.footer__nav-fw500 {
+  font-weight: 500;
+}
+.footer__nav-fw400 p {
+  font-weight: 400;
+}
+
+/*  ne fonctionne plus:
+    input:hover {
+    & + .Heart__likeButton .fa-heart {
+      scale: 1.15;
+    }
+  }*//*# sourceMappingURL=style.css.map */

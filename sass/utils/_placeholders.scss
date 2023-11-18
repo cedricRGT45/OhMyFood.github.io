@@ -1,3 +1,6 @@
+@use "./variables" as *;
+@use "../base/typography" as *;
+
 %flex-row-center {
   display: flex;
   justify-content: center;
@@ -8,6 +11,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+%flex-row-flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 %margin-sections-accueil {
@@ -22,4 +35,10 @@
 %fa-heart-font {
   font-size: 1.37rem;
   font-weigth: 300;
+}
+
+%logo-text {
+  font-family: $title-font;
+  font-size: 1.12rem;
+  font-weight: 400;
 }

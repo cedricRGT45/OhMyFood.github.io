@@ -1,9 +1,7 @@
-
 /*Mixin for pseudo-elements*/
 
-@mixin pseudo-el($display:block, $content:'',$position:absolute){
-    display:$display;
-    content:$content;
-    position:$position;
+@mixin pseudo-el($display: block, $content: "", $position: absolute) {
+  display: $display;
+  content: $content;
+  position: $position;
 }
-

@@ -44,18 +44,65 @@
   }
 }
 
-.outlined-heart {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+/*Bouton favoris coeur*/
 
-.filled-heart {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.Heart {
+  width: 1.35rem;
+  position: relative;
+  cursor: pointer;
+
+  &__likeButton::after {
+    content: "\f004";
+    font: var(--fa-font-solid);
+    font-size: 1.37rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: O;
+    opacity: 0;
+    background: $button-gradient-1;
+    -webkit-font-smoothing: antialiased;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__likeButton .fa-heart {
+    font-size: 1.37rem;
+  }
+  // animation au survol du coeur outlined
+
+  input:hover {
+    & + .Heart__likeButton .fa-heart {
+      scale: 1.15;
+    }
+  }
+
+  // Animation avec le coeur outlined
+
+  input + .Heart__likeButton::after {
+    animation: heart-emptying 300ms ease-in-out forwards;
+  }
+
+  // Disparition du coeur outlined au clic
+
+  input:checked {
+    & + .Heart__likeButton .fa-heart {
+      animation: fadeOut 700ms forwards;
+    }
+
+    //Apparition du coeur filled
+
+    & + .Heart__likeButton::after {
+      animation: fadeIn 700ms ease-in forwards;
+    }
+  }
+
+  input:not(:checked) {
+    & + .Heart__likeButton::after {
+      animation: spinningOut 700ms ease-out;
+    }
+    & + .Heart__likeButton .fa-heart {
+      animation: fadeIn 400ms ease-in forwards;
+    }
+  }
 }
