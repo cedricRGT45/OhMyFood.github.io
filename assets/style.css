@@ -1,41 +1,101 @@
 /* RESET */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
 }
 
-menu, ol, ul {
+menu,
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*colors*/
@@ -56,6 +116,14 @@ h3 {
 p {
   font-family: Roboto;
   font-size: 1rem;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw400 {
+  font-weight: 400;
 }
 
 .intro-content, .fonctionnement__card, .fonctionnement_card_number, .restaurants__cards-content, .header__location, .loader, .loader__lettre {
@@ -94,6 +162,10 @@ p {
   font-family: "Shrikhand", serif;
   font-size: 1.12rem;
   font-weight: 400;
+}
+
+.restaurants__cards-card {
+  cursor: pointer;
 }
 
 /*Loader'keyframes*/
@@ -364,7 +436,6 @@ main {
   width: 90%;
   max-width: 21.62rem;
   height: 15.68rem;
-  margin: 2.19rem;
   background-color: #fff;
   border-radius: 0.94rem;
 }
@@ -458,9 +529,6 @@ main {
 .Heart__likeButton .fa-heart {
   font-size: 1.37rem;
 }
-.Heart input:hover + .Heart__likeButton .fa-heart {
-  scale: 1.15;
-}
 .Heart input + .Heart__likeButton::after {
   animation: heart-emptying 300ms ease-in-out forwards;
 }
@@ -497,12 +565,6 @@ main {
 }
 .footer__nav-linkIcon {
   width: 1rem;
-}
-.footer__nav-fw500 {
-  font-weight: 500;
-}
-.footer__nav-fw400 p {
-  font-weight: 400;
 }
 
 /*  ne fonctionne plus:

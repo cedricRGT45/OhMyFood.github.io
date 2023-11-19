@@ -71,12 +71,6 @@
   }
   // animation au survol du coeur outlined
 
-  input:hover {
-    & + .Heart__likeButton .fa-heart {
-      scale: 1.15;
-    }
-  }
-
   // Animation avec le coeur outlined
 
   input + .Heart__likeButton::after {

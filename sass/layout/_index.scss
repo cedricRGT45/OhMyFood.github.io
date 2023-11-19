@@ -85,9 +85,9 @@ main {
       width: 90%;
       max-width: 21.62rem;
       height: 15.68rem;
-      margin: 2.19rem;
       background-color: $text-white;
       border-radius: $restaurant-cards-br;
+      @extend %cursor-pointer;
     }
     & p {
       font-weight: 300;
