@@ -31,8 +31,9 @@
     }
   }
   & .fa-arrow-left {
-    display: none;
     position: absolute;
+    top: 0.5rem;
+    left: 0;
     padding: 0.3rem 0 0rem 1rem;
     color: $footer-bg;
   }

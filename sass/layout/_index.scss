@@ -82,6 +82,7 @@ main {
     @extend %flex-column-center;
     gap: 1.12rem;
     &-card {
+      position: relative;
       width: 90%;
       max-width: 21.62rem;
       height: 15.68rem;
@@ -90,7 +91,6 @@ main {
       @extend %cursor-pointer;
     }
     & p {
-      font-weight: 300;
       line-height: 1.5rem;
     }
     &-photo {
@@ -99,6 +99,20 @@ main {
       border-radius: $restaurant-cards-br;
       object-fit: cover;
       object-position: center 62%;
+    }
+    &-badgeNew {
+      position: absolute;
+      top: 0.94rem;
+      right: 0.94rem;
+      bottom: 0;
+      left: 15.69rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5rem;
+      height: 1.81rem;
+      color: #008766;
+      background: #99e2d0;
     }
     &-content {
       @extend %flex-row-center;

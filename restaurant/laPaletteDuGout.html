@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Oh my Food</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet" />
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/style.css'>
+    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+    <script src="https://kit.fontawesome.com/adf26ee57a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <i class="fa-solid fa-arrow-left"></i>
+        <img class="header__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo de Oh my Food">
+        <div class="header__location">
+            <i class="fa-solid fa-location-dot"></i>
+            <form>
+                <input type="text" id="location" name="name" required value="Paris, Belleville">
+            </form>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <img class="hero__photo" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'un plat du
+            restaurant la palette du goût">
+        </section>
+        <section class="menus">
+            <div class="menus__titleBar">
+                <h1 class="menus__titleBar-title fw400">La palette du goût</h1>
+                <label class="Heart">
+                    <input type="checkbox" class="hidden">
+                    <span class="Heart__likeButton"><i class="fa-regular fa-heart"></i></span>
+                </label>
+            </div>
+            <div class="menus__borderTitle">
+                <h2 class="fw300">ENTRÈE</h2>
+            </div>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">Fricassée d'escargots</h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">Au piment d'espelette</p>
+                        <p class="dishCard__subcontent-price">
+                            25€</p>
+                    </div>
+                </div>
+                <label class="dishCard__box">
+                    <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                </label>
+            </div>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">
+                        Foie gras de canard mi-cuit</h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">Et ses copeaux de truffe noire</p>
+                        <p class="dishCard__subcontent-price">
+                            35€</p>
+                    </div>
+                    <label class="dishCard__box">
+                        <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                    </label>
+                </div>
+            </div>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">
+                        Œuf au plat</h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">Assaisonné à la truffe sur lit de caviar
+                        </p>
+                        <p class="dishCard__subcontent-price">
+                            20€</p>
+                    </div>
+                    <label class="dishCard__box">
+                        <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                    </label>
+                </div>
+            </div>
+            <div class="menus__borderTitle">
+                <h2 class="fw300">PLATS</h2>
+            </div>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">Filet de bœuf aux herbes
+                    </h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">Accompagné de sa ribambelle de légumes
+                        </p>
+                        <p class="dishCard__subcontent-price">
+                            40€</p>
+                    </div>
+                </div>
+                <label class="dishCard__box">
+                    <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                </label>
+            </div>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">
+                        Parmentier de queue de bœuf</h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">À la truffe noire sur sa purée de panais
+                        </p>
+                        <p class="dishCard__subcontent-price">
+                            35€</p>
+                    </div>
+                    <label class="dishCard__box">
+                        <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                    </label>
+                </div>
+            </div>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">
+                        Filet de turbot</h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">
+                            Aux agrumes</p>
+                        <p class="dishCard__subcontent-price">
+                            44€</p>
+                    </div>
+                    <label class="dishCard__box">
+                        <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                    </label>
+                </div>
+            </div>
+            <h2 class="menus__borderTitle fw300">
+                DESSERTS
+            </h2>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">
+                        Paris-Brest</h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">Revisité
+                        </p>
+                        <p class="dishCard__subcontent-price">
+                            18€</p>
+                    </div>
+                    <label class="dishCard__box">
+                        <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                    </label>
+                </div>
+            </div>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">
+                        Macaron au chocolat d'exception</h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">Et glace à la vanille de Madagascar
+                        </p>
+                        <p class="dishCard__subcontent-price">
+                            22€
+                        </p>
+                    </div>
+                    <label class="dishCard__box">
+                        <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                    </label>
+                </div>
+            </div>
+            <div class="dishCard">
+                <div class="dishCard__content">
+                    <h3 class="dishCard__title">Mousse au chocolat
+                    </h3>
+                    <div class="dishCard__subcontent">
+                        <p class="dishCard__subcontent-subtitle">Au piment d'Espelette et à la truffe noire
+                        </p>
+                        <p class="dishCard__subcontent-price">
+                            23€</p>
+                    </div>
+                </div>
+                <label class="dishCard__box">
+                    <input type="checkbox" id="dishChoice" name="dishChoice" checked>
+                </label>
+            </div>
+        </section>
+    </main>

@@ -74,7 +74,7 @@
   }
 }
 
-/*Animation pour le bouton favoris coeur*/
+/*Animation pour le bouton favoris coeur et menu restaurants*/
 
 @keyframes fadeOut {
   0% {
@@ -119,5 +119,33 @@
     transform: rotate(360deg);
     opacity: 0;
     scale: 0.3;
+  }
+}
+
+//animation menus restaurant seulement
+@keyframes spinningIn {
+  0% {
+    transform: rotate(360deg);
+    scale: 0;
+    opacity: 0;
+  }
+  10% {
+    transform: rotate(300deg);
+    scale: 0.3;
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotate(0deg);
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes translateToRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }

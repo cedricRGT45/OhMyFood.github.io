@@ -8,14 +8,4 @@
 @use "components/buttons";
 @use "layout/footer";
 @use "base/typography";
-
-// le loader ne remplit pas la hauteur>>> résolu (position fixed, top:0...)
-// décalage entre le coeur vide et remplit?
-//    font: 1.12rem "$title-font";>>super property ne fonctionne pas avec$?
-/*  ne fonctionne plus:
-    input:hover {
-    & + .Heart__likeButton .fa-heart {
-      scale: 1.15;
-    }
-  }*/
-//balise a >>>automatiquement en #9356dc
+@use "layout/restaurants";

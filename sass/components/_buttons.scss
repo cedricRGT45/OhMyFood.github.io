@@ -13,6 +13,7 @@
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1;
+  @extend %cursor-pointer;
 
   &:after {
     content: "";
@@ -31,13 +32,11 @@
     z-index: -1;
   }
   &:active {
-    cursor: pointer;
     &:after {
       opacity: 1;
     }
   }
   &:hover {
-    cursor: pointer;
     &:after {
       opacity: 1;
     }
@@ -71,12 +70,19 @@
   }
   // animation au survol du coeur outlined
 
-  // Animation avec le coeur outlined
-
-  input + .Heart__likeButton::after {
-    animation: heart-emptying 300ms ease-in-out forwards;
+  input:hover {
+    & + .Heart__likeButton .fa-heart {
+      transform: scale(1.15);
+    }
   }
 
+  // animation au survol du coeur outlined
+
+  input:hover {
+    & + .Heart__likeButton::after {
+      transform: scale(1.15);
+    }
+  }
   // Disparition du coeur outlined au clic
 
   input:checked {
@@ -90,6 +96,8 @@
       animation: fadeIn 700ms ease-in forwards;
     }
   }
+
+  //Disparition du coeur filled
 
   input:not(:checked) {
     & + .Heart__likeButton::after {
