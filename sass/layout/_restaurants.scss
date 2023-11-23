@@ -4,8 +4,8 @@
 
 main {
   width: 100%;
-  position: relative;
   object-fit: cover;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
@@ -19,20 +19,26 @@ main {
 }
 
 .menus {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 80%;
   background: $accueil_card-bgcolor;
-  border-radius: 3rem 3rem 0 0;
   display: flex;
   gap: 1.5rem;
+  margin-bottom: 2.5rem;
 
   &__titleBar {
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    top: -3rem;
+    background: $accueil_card-bgcolor;
+    border-radius: 3rem 3rem 0 0;
     @extend %padding-menus;
     display: flex;
     align-items: center;
+    gap: 2rem;
     padding-top: 2rem;
     &-title {
       font-size: 1.75rem;
@@ -51,14 +57,14 @@ main {
 
 .dishCard {
   position: relative;
-  width: 100%;
+  width: 98%;
   max-width: 20rem;
   height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  margin: 0 1.06rem;
+  margin: auto;
   padding: 1rem;
   cursor: pointer;
   box-sizing: border-box;
