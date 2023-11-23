@@ -7,9 +7,12 @@ main {
 }
 /*Intro content*/
 
+.hero {
+  background: $accueil_card-bgcolor;
+}
 .intro-content {
   width: 100%;
-  margin: 2.44rem 0 3.56rem 0;
+  padding: 2.44rem 0 3.56rem 0;
   @extend %flex-row-center;
   flex-direction: column;
   text-align: center;
@@ -29,7 +32,7 @@ main {
 .fonctionnement {
   @extend %margin-sections-accueil;
   & h2 {
-    padding: 3rem 0 1.63rem 0;
+    padding: 0 0 1.63rem 0;
   }
 
   &__card {
@@ -81,13 +84,14 @@ main {
   &__cards {
     @extend %flex-column-center;
     gap: 1.12rem;
+    margin-bottom: 4.12rem;
     &-card {
-      position: relative;
       width: 90%;
       max-width: 21.62rem;
       height: 15.68rem;
       background-color: $text-white;
       border-radius: $restaurant-cards-br;
+      position: relative;
       @extend %cursor-pointer;
     }
     & p {
@@ -105,7 +109,6 @@ main {
       top: 0.94rem;
       right: 0.94rem;
       bottom: 0;
-      left: 15.69rem;
       display: flex;
       align-items: center;
       justify-content: center;

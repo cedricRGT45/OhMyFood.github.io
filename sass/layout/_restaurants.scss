@@ -8,13 +8,25 @@ main {
   overflow-x: hidden;
   box-sizing: border-box;
 }
-
+.herolaNote {
+  width: 100%;
+  height: 19.18rem;
+  position: relative;
+  &__photo {
+    position: absolute;
+    top: -4.5rem;
+  }
+}
 .hero {
   width: 100%;
   &__photo {
     width: 100%;
     top: 0;
     bottom: 20rem;
+    &-laNote {
+      width: 100%;
+      height: 17.18rem;
+    }
   }
 }
 
@@ -27,6 +39,10 @@ main {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
+
+  & h2 {
+    font-size: 1rem;
+  }
 
   &__titleBar {
     width: 100%;
@@ -58,11 +74,10 @@ main {
 .dishCard {
   position: relative;
   width: 98%;
-  max-width: 20rem;
+  max-width: 21.81rem;
   height: 4.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 3rem;
   margin: auto;
   padding: 1rem;
@@ -122,7 +137,7 @@ main {
 .dishCard__box {
   position: absolute;
   top: 0;
-  left: 20.25rem;
+  left: 21.8rem;
   bottom: 0;
   right: 0;
   width: 20%;
@@ -165,35 +180,24 @@ main {
 }
 
 .dishCard:hover .dishCard__box {
-  transform: translateX(-3.9rem);
+  transform: translateX(-3.65rem);
 }
 
 .dishCard:hover .dishCard__content {
   width: 85%;
 }
 
+.dishCard:hover .dishCard__title {
+  width: 70%;
+}
+
 .dishCard:hover .dishCard__subcontent-price {
-  padding: 0 0.94rem;
+  padding: 0 0.5rem;
 }
 .dishCard:hover .dishCard__subcontent {
-  padding: 0 0.31rem;
+  padding: 0 0.31rem 0 0;
 }
 
 .dishCard:hover .dishCard__box::after {
   animation: spinningIn 700ms 200ms ease-in;
-}
-
-//animation des cartes au chargement de la page
-
-.dishCard:nth-child(3) {
-  animation-delay: 1000ms;
-}
-.dishCard:nth-child(4) {
-  animation-delay: 1500ms;
-}
-.dishCard:nth-child(5) {
-  animation-delay: 2000ms;
-}
-.dishCard:nth-child(6) {
-  animation-delay: 3000ms;
 }
