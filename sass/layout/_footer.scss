@@ -7,13 +7,29 @@
   gap: 1rem;
   padding: 1.38rem 1.56rem;
   background: $footer-bg;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+
   &__title {
-    width: 100%;
     color: $text-white;
     @extend %logo-text;
   }
   &__nav {
     width: 100%;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      :nth-child(3) {
+        margin-left: 1.5rem;
+      }
+    }
     &-link {
       @extend %flex-row-flexStart;
       color: $text-white;

@@ -23,10 +23,6 @@ main {
     width: 100%;
     top: 0;
     bottom: 20rem;
-    &-laNote {
-      width: 100%;
-      height: 17.18rem;
-    }
   }
 }
 
@@ -37,7 +33,7 @@ main {
   flex-direction: column;
   background: $accueil_card-bgcolor;
   display: flex;
-  gap: 1.5rem;
+  gap: 0.75rem;
   margin-bottom: 2.5rem;
 
   & h2 {
@@ -50,24 +46,25 @@ main {
     position: absolute;
     top: -3rem;
     background: $accueil_card-bgcolor;
-    border-radius: 3rem 3rem 0 0;
+    border-radius: 2.5rem 2.5rem 0 0;
     @extend %padding-menus;
     display: flex;
     align-items: center;
-    gap: 2rem;
-    padding-top: 2rem;
+    padding-top: 1.94rem;
     &-title {
       font-size: 1.75rem;
+      width: 85%;
       @extend %logo-text;
     }
   }
   &__borderTitle {
     width: 2.5rem;
     font-size: 1rem;
-    border-bottom: 2px solid $tertiary;
+    line-height: 2rem;
+    border-bottom: 0.18rem solid $tertiary;
     @extend %padding-menus;
     padding-left: 0;
-    margin-left: 1.06rem;
+    margin: 0 0 0.75rem 1.06rem;
   }
 }
 
@@ -109,7 +106,7 @@ main {
   &__subcontent {
     width: 100%;
     display: flex;
-    padding: 0;
+    padding: 0.31rem 0 0 0;
     margin: 0;
     color: #000;
     white-space: nowrap;
@@ -200,4 +197,8 @@ main {
 
 .dishCard:hover .dishCard__box::after {
   animation: spinningIn 700ms 200ms ease-in;
+}
+
+.cta {
+  margin: 2.5rem auto 0 auto;
 }

@@ -19,12 +19,6 @@
 
         <a href="../index.html"> <i class="fa-solid fa-arrow-left"></i></a>
         <img class="header__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo de Oh my Food">
-        <div class="header__location">
-            <i class="fa-solid fa-location-dot"></i>
-            <form>
-                <input type="text" id="location" name="name" required value="Paris, Belleville">
-            </form>
-        </div>
     </header>
     <main>
         <section class="hero">
@@ -42,13 +36,12 @@
                     <span class="Heart__likeButton"><i class="fa-regular fa-heart"></i></span>
                 </label>
             </div>
-
-            <!-- Barre de soulignement des sous-titres -->
-            <div class="menus__borderTitle">
+            <div class="menus__borderTitle"> <!-- Barre de soulignement des sous-titres -->
                 <h2 class="fw300">ENTRÉES</h2>
             </div>
 
             <!-- Description des plats -->
+
             <article class="dishCard">
                 <div class="dishCard__content">
                     <h3 class="dishCard__title">Tartare de poulpe acidulé</h3>
@@ -79,10 +72,10 @@
             <article class="dishCard">
                 <div class="dishCard__content">
                     <h3 class="dishCard__title">
-                        <p class="dishCard__subcontent-subtitle">Soupe à l'oignon
+                        Soupe à l'oignon
                     </h3>
                     <div class="dishCard__subcontent">
-                        <p>Revisitée</p>
+                        <p class="dishCard__subcontent-subtitle">Revisitée</p>
                         <p class="dishCard__subcontent-price">
                             20€</p>
                     </div>
@@ -188,7 +181,7 @@
                     <input type="checkbox" name="dishChoice">
                 </label>
             </article>
-            <a href="#">
+            <a class="cta" href="#">
                 <button class="btn">
                     Commander
                 </button>
