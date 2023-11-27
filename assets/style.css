@@ -246,7 +246,7 @@ p {
   margin-left: 1.5rem;
 }
 
-.menus__titleBar-title, .footer__title {
+.footer__title, .menus__titleBar-title {
   font-family: "Shrikhand", serif;
   font-size: 1.12rem;
   font-weight: 400;
@@ -254,10 +254,6 @@ p {
 
 .btn, .restaurants__cards-card {
   cursor: pointer;
-}
-
-.menus__titleBar, .menus__borderTitle {
-  padding: 2.5rem 1.06rem 0 1.06rem;
 }
 
 /* loader */
@@ -671,13 +667,19 @@ main {
   background: var(--White, #fff);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: crescendo reverse 3000ms forwards, translateToRight 3000ms forwards;
+  animation: crescendo reverse 2250ms forwards, translateToRight 2250ms forwards;
   opacity: 0;
 }
 @media (min-width: 768px) {
   .dishCard {
     max-width: 39.62rem;
   }
+}
+.dishCard:nth-child(n+1):nth-child(n+6) {
+  animation-delay: 500ms;
+}
+.dishCard:nth-child(n+7):nth-child(n+10) {
+  animation-delay: 750ms;
 }
 .dishCard__content {
   width: 17.93rem;
@@ -817,37 +819,43 @@ main {
 }
 
 .hero {
-  overflow: hidden;
+  position: relative;
   width: 100%;
+  height: 17.18rem;
+  min-height: 10rem;
+  background: none;
+  margin-bottom: -20%;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 23rem;
+    min-height: 23.93rem;
+    margin-bottom: 8%;
   }
 }
 .hero__photo {
-  top: 0;
-  bottom: 20rem;
+  position: absolute;
+  bottom: 7.5%;
+  z-index: -1;
 }
 @media (min-width: 768px) {
   .hero__photo {
-    object-position: 0 -350px;
+    min-height: 27rem;
+    bottom: -10rem;
   }
 }
 
 .menus {
-  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   background: #f6f6f6;
-  display: flex;
   gap: 0.75rem;
-  margin-bottom: 2.5rem;
+  border-radius: 2.5rem 2.5rem 0 0;
+  padding: 2rem 1.06rem 2.5rem 1.06rem;
 }
 @media (min-width: 768px) {
   .menus {
-    margin: 2.5rem auto;
+    margin: 0 auto;
     width: 75%;
   }
 }
@@ -857,20 +865,10 @@ main {
 .menus__titleBar {
   width: 100%;
   height: 4rem;
-  position: absolute;
-  top: -3rem;
-  background: #f6f6f6;
-  border-radius: 2.5rem 2.5rem 0 0;
   display: flex;
   align-items: center;
-  padding-top: 1.94rem;
-}
-@media (min-width: 768px) {
-  .menus__titleBar {
-    padding: 3.19rem 0 2.5rem 0;
-    justify-content: center;
-    top: -4.5rem;
-  }
+  padding: 0 0 2.5rem 0;
+  justify-content: center;
 }
 .menus__titleBar-title {
   font-size: 1.75rem;
@@ -888,12 +886,7 @@ main {
   line-height: 2rem;
   border-bottom: 0.18rem solid #99e2d0;
   padding-left: 0;
-  margin: 0 0 0.75rem 1.06rem;
-}
-@media (min-width: 768px) {
-  .menus__borderTitle {
-    margin-left: 13rem;
-  }
+  animation: crescendo reverse 2250ms forwards;
 }
 
 .cta {

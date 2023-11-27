@@ -1,5 +1,4 @@
-@use "../utils/placeholders" as *;
-@use "../utils/variables" as *;
+@use "../utils" as *;
 @use "../base/typography" as *;
 @use "../components/dishCard" as *;
 
@@ -26,32 +25,39 @@ main {
   }
 }
 .hero {
-  overflow: hidden;
+  position: relative;
   width: 100%;
+  height: 17.18rem;
+  min-height: 10rem;
+  background: none;
+  margin-bottom: -20%;
+
   @media (min-width: 768px) {
-    height: 23rem;
+    min-height: 23.93rem;
+    margin-bottom: 8%;
   }
   &__photo {
-    top: 0;
-    bottom: 20rem;
+    position: absolute;
+    bottom: 7.5%;
+    z-index: -1;
+
     @media (min-width: 768px) {
-      object-position: 0 -350px;
+      min-height: 27rem;
+      bottom: -10rem;
     }
   }
 }
 
 .menus {
-  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   background: $accueil_card-bgcolor;
-  display: flex;
   gap: 0.75rem;
-  margin-bottom: 2.5rem;
-
+  border-radius: 2.5rem 2.5rem 0 0;
+  padding: 2rem 1.06rem 2.5rem 1.06rem;
   @media (min-width: 768px) {
-    margin: 2.5rem auto;
+    margin: 0 auto;
     width: 75%;
   }
 
@@ -62,19 +68,11 @@ main {
   &__titleBar {
     width: 100%;
     height: 4rem;
-    position: absolute;
-    top: -3rem;
-    background: $accueil_card-bgcolor;
-    border-radius: 2.5rem 2.5rem 0 0;
-    @extend %padding-menus;
     display: flex;
     align-items: center;
-    padding-top: 1.94rem;
-    @media (min-width: 768px) {
-      padding: 3.19rem 0 2.5rem 0;
-      justify-content: center;
-      top: -4.5rem;
-    }
+    padding: 0 0 2.5rem 0;
+    justify-content: center;
+
     &-title {
       font-size: 1.75rem;
       width: 85%;
@@ -90,15 +88,10 @@ main {
     font-size: 1rem;
     line-height: 2rem;
     border-bottom: 0.18rem solid $tertiary;
-    @extend %padding-menus;
     padding-left: 0;
-    margin: 0 0 0.75rem 1.06rem;
-    @media (min-width: 768px) {
-      margin-left: 13rem;
-    }
+    animation: crescendo reverse 2250ms forwards;
   }
 }
-
 .cta {
   margin: 2.5rem auto 0 auto;
 }
