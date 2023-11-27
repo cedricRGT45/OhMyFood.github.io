@@ -1,7 +1,5 @@
 @use "base/reset";
-@use "utils/variables";
-@use "utils/mixins";
-@use "utils/placeholders";
+@use "utils";
 @use "layout/loader";
 @use "layout/header";
 @use "layout/index";
