@@ -262,7 +262,6 @@ p {
 }
 /* loader */
 .loader {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -387,7 +386,6 @@ main {
 /*Fonctionnement*/
 @media (min-width: 768px) {
   .fonctionnement {
-    margin: 0;
     padding: 0 11.25rem;
   }
 }
@@ -440,10 +438,11 @@ main {
 /* Cartes des restaurants*/
 .restaurants {
   background: #f6f6f6;
+  padding-bottom: 4.12rem;
 }
 @media (min-width: 768px) {
   .restaurants {
-    padding: 0 11.25rem;
+    padding: 0 11.25rem 1.88rem 11.25rem;
   }
 }
 .restaurants h2 {
@@ -456,7 +455,6 @@ main {
 }
 .restaurants__cards {
   gap: 1.12rem;
-  margin-bottom: 4.12rem;
 }
 @media (min-width: 768px) {
   .restaurants__cards {
@@ -667,20 +665,40 @@ main {
 .herolaNote {
   width: 100%;
   height: 19.18rem;
-  position: relative;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .herolaNote {
+    height: 23.93rem;
+    overflow: hidden;
+  }
 }
 .herolaNote__photo {
-  position: absolute;
-  top: -4.5rem;
+  object-position: 0 -75px;
+}
+@media (min-width: 768px) {
+  .herolaNote__photo {
+    object-position: 0 -200px;
+  }
 }
 
 .hero {
+  overflow: hidden;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .hero {
+    height: 23rem;
+  }
+}
 .hero__photo {
-  width: 100%;
   top: 0;
   bottom: 20rem;
+}
+@media (min-width: 768px) {
+  .hero__photo {
+    object-position: 0 -350px;
+  }
 }
 
 .menus {
@@ -692,6 +710,12 @@ main {
   display: flex;
   gap: 0.75rem;
   margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .menus {
+    margin: 2.5rem auto;
+    width: 75%;
+  }
 }
 .menus h2 {
   font-size: 1rem;
@@ -707,9 +731,22 @@ main {
   align-items: center;
   padding-top: 1.94rem;
 }
+@media (min-width: 768px) {
+  .menus__titleBar {
+    padding: 3.19rem 0 2.5rem 0;
+    justify-content: center;
+    top: -4.5rem;
+  }
+}
 .menus__titleBar-title {
   font-size: 1.75rem;
   width: 85%;
+}
+@media (min-width: 768px) {
+  .menus__titleBar-title {
+    width: 32%;
+    min-width: 17rem;
+  }
 }
 .menus__borderTitle {
   width: 2.5rem;
@@ -718,6 +755,11 @@ main {
   border-bottom: 0.18rem solid #99e2d0;
   padding-left: 0;
   margin: 0 0 0.75rem 1.06rem;
+}
+@media (min-width: 768px) {
+  .menus__borderTitle {
+    margin-left: 13rem;
+  }
 }
 
 .dishCard {
@@ -738,6 +780,11 @@ main {
   overflow: hidden;
   animation: crescendo reverse 3000ms forwards, translateToRight 3000ms forwards;
   opacity: 0;
+}
+@media (min-width: 768px) {
+  .dishCard {
+    max-width: 39.62rem;
+  }
 }
 .dishCard__content {
   width: 17.93rem;
@@ -770,6 +817,12 @@ main {
   font-weight: 300;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 0.5rem;
+}
+@media (min-width: 768px) {
+  .dishCard__subcontent-subtitle {
+    width: 36rem;
+  }
 }
 .dishCard__subcontent-price {
   text-align: end;
@@ -778,8 +831,10 @@ main {
   font-size: 0.94rem;
   font-weight: 700;
 }
-.dishCard__subcontent-subtitle {
-  padding-right: 0.5rem;
+@media (min-width: 768px) {
+  .dishCard__subcontent-price {
+    margin: 0 0.5rem 0 0;
+  }
 }
 
 .dishCard__box {
@@ -795,6 +850,11 @@ main {
   align-items: center;
   border-radius: 0 0.94rem 0.94rem 0rem;
   background: #99e2d0;
+}
+@media (min-width: 768px) {
+  .dishCard__box {
+    left: 39.7rem;
+  }
 }
 .dishCard__box input {
   display: none;
@@ -833,17 +893,18 @@ main {
 .dishCard:hover .dishCard__content {
   width: 85%;
 }
+@media (min-width: 768px) {
+  .dishCard:hover .dishCard__content {
+    width: 93%;
+  }
+}
 
 .dishCard:hover .dishCard__title {
   width: 70%;
 }
 
-.dishCard:hover .dishCard__subcontent-price {
-  padding: 0 0.5rem;
-}
-
 .dishCard:hover .dishCard__subcontent {
-  padding: 0 0.31rem 0 0;
+  padding: 0.31rem 0 0 0;
 }
 
 .dishCard:hover .dishCard__box::after {
