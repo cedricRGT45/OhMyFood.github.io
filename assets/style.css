@@ -258,6 +258,7 @@ p {
 
 /* loader */
 .loader {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -273,16 +274,16 @@ p {
   overflow: hidden;
   /*Style et animation des lettres*/
 }
-@media (min-width: 768px) {
-  .loader {
-    font-size: 10rem;
-  }
-}
 .loader__lettre {
   font-size: 2rem;
   color: #9356dc;
   letter-spacing: 1 rem;
   animation: flash 3000ms, crescendo 3000ms;
+}
+@media (min-width: 768px) {
+  .loader__lettre {
+    font-size: 5rem;
+  }
 }
 .loader__lettre:nth-child(1) {
   animation-delay: 0.1s;
@@ -387,6 +388,7 @@ main {
 /*Fonctionnement*/
 @media (min-width: 768px) {
   .fonctionnement {
+    width: 90rem;
     margin: 0;
     padding: 3.12rem 11.25rem;
   }
@@ -399,10 +401,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 98%;
   }
 }
 .fonctionnement__card {
-  max-width: 20rem;
+  width: 100%;
+  max-width: 20.15rem;
   height: 4.52rem;
   margin: auto;
   justify-content: flex-start;
@@ -411,7 +415,7 @@ main {
   border-radius: 1.25rem;
   background: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  gap: 1.3rem;
+  gap: 2.28rem;
 }
 @media (min-width: 768px) {
   .fonctionnement__card {
@@ -460,15 +464,12 @@ main {
 }
 @media (min-width: 768px) {
   .restaurants__cards {
-    margin-bottom: 1.88rem;
-  }
-}
-@media (min-width: 768px) {
-  .restaurants__cards {
+    width: 67.5rem;
     display: grid;
     grid-column: 1fr 1fr;
     grid-row: 1fr 1fr;
-    width: 100%;
+    margin-bottom: 1.88rem;
+    gap: 6.25rem;
   }
   .restaurants__cards :nth-child(1) {
     grid-column: 1/2;
@@ -497,7 +498,9 @@ main {
 }
 @media (min-width: 768px) {
   .restaurants__cards-card {
-    max-width: 30.62rem;
+    width: 100%;
+    max-width: 34rem;
+    margin-bottom: -3.13rem;
   }
 }
 .restaurants__cards p {
