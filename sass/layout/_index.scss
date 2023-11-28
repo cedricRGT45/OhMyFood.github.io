@@ -41,8 +41,10 @@ main {
 
 .fonctionnement {
   @extend %margin-sections-accueil;
+
   @media (min-width: 768px) {
-    padding: 0 11.25rem;
+    margin: 0;
+    padding: 3.12rem 11.25rem;
   }
   & h2 {
     padding: 0 0 1.63rem 0;
