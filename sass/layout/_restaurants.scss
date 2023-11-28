@@ -10,7 +10,8 @@ main {
 }
 .herolaNote {
   width: 100%;
-  height: 19.18rem;
+  height: 100%;
+  min-height: 19.18rem;
   object-fit: cover;
   @media (min-width: 768px) {
     height: 23.93rem;
@@ -28,21 +29,21 @@ main {
   position: relative;
   width: 100%;
   height: 17.18rem;
-  min-height: 10rem;
   background: none;
   margin-bottom: -20%;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     min-height: 23.93rem;
-    margin-bottom: 8%;
+    margin-bottom: -4%;
   }
   &__photo {
     position: absolute;
+    min-height: 17.18rem;
     bottom: 7.5%;
     z-index: -1;
 
     @media (min-width: 768px) {
-      min-height: 27rem;
       bottom: -10rem;
     }
   }
@@ -50,46 +51,55 @@ main {
 
 .menus {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column;
   background: $accueil_card-bgcolor;
-  gap: 0.75rem;
   border-radius: 2.5rem 2.5rem 0 0;
   padding: 2rem 1.06rem 2.5rem 1.06rem;
   @media (min-width: 768px) {
-    margin: 0 auto;
     width: 75%;
-  }
-
-  & h2 {
-    font-size: 1rem;
+    margin: 0 auto;
+    padding-top: 3.19rem;
   }
 
   &__titleBar {
     width: 100%;
-    height: 4rem;
-    display: flex;
+    @extend %flex-row-flexStart;
     align-items: center;
-    padding: 0 0 2.5rem 0;
-    justify-content: center;
-
+    gap: 0.75rem;
+    @media (min-width: 768px) {
+      justify-content: center;
+    }
     &-title {
       font-size: 1.75rem;
       width: 85%;
       @extend %logo-text;
       @media (min-width: 768px) {
-        width: 32%;
+        width: 20%;
         min-width: 17rem;
       }
     }
   }
-  &__borderTitle {
-    width: 2.5rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    border-bottom: 0.18rem solid $tertiary;
-    padding-left: 0;
-    animation: crescendo reverse 2250ms forwards;
+  &__dishcards {
+    width: 100%;
+    margin: auto;
+    max-width: 21.81rem;
+    @media (min-width: 768px) {
+      max-width: 39.62rem;
+    }
+    & h2 {
+      font-size: 1rem;
+      margin: 2.5rem 0 0.75rem 0;
+    }
+
+    // animation sur les sous-titres
+    &-borderTitle {
+      width: 2.5rem;
+      font-size: 1rem;
+      line-height: 2rem;
+      border-bottom: 0.18rem solid $tertiary;
+      padding-left: 0;
+      animation: crescendo reverse 3000ms forwards;
+    }
   }
 }
 .cta {

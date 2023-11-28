@@ -225,12 +225,12 @@ p {
   align-items: center;
 }
 
-.footer__nav-link {
+.footer__nav-link, .menus__titleBar {
   display: flex;
   justify-content: flex-start;
 }
 
-.footer {
+.footer, .menus {
   display: flex;
   flex-direction: column;
 }
@@ -653,14 +653,13 @@ main {
 
 .dishCard {
   position: relative;
-  width: 98%;
+  width: 100%;
   max-width: 21.81rem;
   height: 4.5rem;
   display: flex;
   align-items: center;
-  gap: 3rem;
-  margin: auto;
   padding: 0.94rem 0 0.94rem 0.94rem;
+  margin: 0.75rem 0 0.75rem 0;
   cursor: pointer;
   box-sizing: border-box;
   border-radius: 0.94rem;
@@ -672,6 +671,7 @@ main {
 }
 @media (min-width: 768px) {
   .dishCard {
+    width: 100%;
     max-width: 39.62rem;
   }
 }
@@ -693,10 +693,10 @@ main {
 .dishCard__box {
   position: absolute;
   top: 0;
-  left: 21.8rem;
+  left: 100%;
   bottom: 0;
   right: 0;
-  width: 20%;
+  width: 100%;
   max-width: 3.68rem;
   height: 100%;
   display: flex;
@@ -800,7 +800,8 @@ main {
 
 .herolaNote {
   width: 100%;
-  height: 19.18rem;
+  height: 100%;
+  min-height: 19.18rem;
   object-fit: cover;
 }
 @media (min-width: 768px) {
@@ -822,53 +823,50 @@ main {
   position: relative;
   width: 100%;
   height: 17.18rem;
-  min-height: 10rem;
   background: none;
   margin-bottom: -20%;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .hero {
     min-height: 23.93rem;
-    margin-bottom: 8%;
+    margin-bottom: -4%;
   }
 }
 .hero__photo {
   position: absolute;
+  min-height: 17.18rem;
   bottom: 7.5%;
   z-index: -1;
 }
 @media (min-width: 768px) {
   .hero__photo {
-    min-height: 27rem;
     bottom: -10rem;
   }
 }
 
 .menus {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   background: #f6f6f6;
-  gap: 0.75rem;
   border-radius: 2.5rem 2.5rem 0 0;
   padding: 2rem 1.06rem 2.5rem 1.06rem;
 }
 @media (min-width: 768px) {
   .menus {
-    margin: 0 auto;
     width: 75%;
+    margin: 0 auto;
+    padding-top: 3.19rem;
   }
-}
-.menus h2 {
-  font-size: 1rem;
 }
 .menus__titleBar {
   width: 100%;
-  height: 4rem;
-  display: flex;
   align-items: center;
-  padding: 0 0 2.5rem 0;
-  justify-content: center;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .menus__titleBar {
+    justify-content: center;
+  }
 }
 .menus__titleBar-title {
   font-size: 1.75rem;
@@ -876,17 +874,31 @@ main {
 }
 @media (min-width: 768px) {
   .menus__titleBar-title {
-    width: 32%;
+    width: 20%;
     min-width: 17rem;
   }
 }
-.menus__borderTitle {
+.menus__dishcards {
+  width: 100%;
+  margin: auto;
+  max-width: 21.81rem;
+}
+@media (min-width: 768px) {
+  .menus__dishcards {
+    max-width: 39.62rem;
+  }
+}
+.menus__dishcards h2 {
+  font-size: 1rem;
+  margin: 2.5rem 0 0.75rem 0;
+}
+.menus__dishcards-borderTitle {
   width: 2.5rem;
   font-size: 1rem;
   line-height: 2rem;
   border-bottom: 0.18rem solid #99e2d0;
   padding-left: 0;
-  animation: crescendo reverse 2250ms forwards;
+  animation: crescendo reverse 3000ms forwards;
 }
 
 .cta {
