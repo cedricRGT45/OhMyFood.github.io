@@ -16,13 +16,14 @@
     <header class="header">
 
         <!-- Flèche de retour vers l'accueil -->
-
         <a href="../index.html"> <i class="fa-solid fa-arrow-left"></i></a>
+
         <img class="header__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo de Oh my Food">
     </header>
+
     <main>
-        <section class="hero">
-            <img class="hero__photo"
+        <section class="banner">
+            <img class="banner__photo"
                 src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt="photo d'un plat du Délice des sens">
         </section>
@@ -38,151 +39,149 @@
                 </label>
             </div>
 
-            <!-- Barre de soulignement des sous-titres -->
-            <div class="menus__borderTitle">
-                <h2 class="fw300">ENTRÈE</h2>
-            </div>
 
             <!-- Description des plats -->
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">Tartare de thons</h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">Assaisonné au yuzu</p>
-                        <p class="dishCard__subcontent-price">
-                            25€</p>
-                    </div>
-                </div>
-                <label class="dishCard__box">
-                    <input type="checkbox" name="dishChoice">
-                </label>
-            </article>
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">
-                        Bouchée de homard croustillant</h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">Et sa farandole de petits légumes</p>
-                        <p class="dishCard__subcontent-price">
-                            35€</p>
-                    </div>
-                    <label class="dishCard__box">
+            <div class="menus__dishcards">
+                <!-- Barre de soulignement des sous-titres -->
+                <h2 class="menus__dishcards-borderTitle fw300">ENTRÈE</h2>
+                <article class="dishCard">
+                    <label class="dishCard__content">
                         <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">Tartare de thons</h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">Assaisonné au yuzu</p>
+                            <p class="dishCard__subcontent-price">
+                                25€</p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
                     </label>
-                </div>
-            </article>
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">
-                        Velouté de cèpes</h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">Aux truffes</p>
-                        <p class="dishCard__subcontent-price">
-                            20€</p>
-                    </div>
-                    <label class="dishCard__box">
+                </article>
+                <article class="dishCard">
+                    <label class="dishCard__content">
                         <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">
+                            Bouchée de homard croustillant</h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">Et sa farandole de petits légumes</p>
+                            <p class="dishCard__subcontent-price">
+                                35€</p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
                     </label>
-                </div>
-            </article>
-            <div class="menus__borderTitle">
-                <h2 class="fw300">PLATS</h2>
+                </article>
+                <article class="dishCard">
+                    <label class="dishCard__content">
+                        <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">
+                            Velouté de cèpes</h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">Aux truffes</p>
+                            <p class="dishCard__subcontent-price">
+                                20€</p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
+                    </label>
+                </article>
+                <h2 class="menus__dishcards-borderTitle fw300">PLATS</h2>
+                <article class="dishCard">
+                    <label class="dishCard__content">
+                        <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">Poulet rôti aux herbes de Provence
+                        </h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">Et sa crème de truffe
+                            </p>
+                            <p class="dishCard__subcontent-price">
+                                40€</p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
+                    </label>
+                </article>
+                <article class="dishCard">
+                    <label class="dishCard__content">
+                        <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">
+                            Langouste rôtie</h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">Et ses légumes de saison
+                            </p>
+                            <p class="dishCard__subcontent-price">
+                                35€</p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
+                    </label>
+                </article>
+                <article class="dishCard">
+                    <label class="dishCard__content">
+                        <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">
+                            Côte de bœuf Angus</h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">
+                                Et sa purée de panais</p>
+                            <p class="dishCard__subcontent-price">
+                                44€</p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
+                    </label>
+                </article>
+                <h2 class="menus__dishcards-borderTitle fw300">
+                    DESSERTS
+                </h2>
+                <article class="dishCard">
+                    <label class="dishCard__content">
+                        <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">
+                            Farandole de desserts</h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">Du chef
+                            </p>
+                            <p class="dishCard__subcontent-price">
+                                18€</p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
+                    </label>
+                </article>
+                <article class="dishCard">
+                    <label class="dishCard__content">
+                        <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">
+                            Crème brulée</h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">Revisitée
+                            </p>
+                            <p class="dishCard__subcontent-price">
+                                22€
+                            </p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
+                    </label>
+                </article>
+                <article class="dishCard">
+                    <label class="dishCard__content">
+                        <input type="checkbox" name="dishChoice">
+                        <h3 class="dishCard__title">Tiramisu
+                        </h3>
+                        <div class="dishCard__subcontent">
+                            <p class="dishCard__subcontent-subtitle">
+                                À la noisette
+                            </p>
+                            <p class="dishCard__subcontent-price">
+                                23€</p>
+                        </div>
+                        <div class="dishCard__box">
+                        </div>
+                    </label>
+                </article>
             </div>
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">Poulet rôti aux herbes de Provence
-                    </h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">Et sa crème de truffe
-                        </p>
-                        <p class="dishCard__subcontent-price">
-                            40€</p>
-                    </div>
-                </div>
-                <label class="dishCard__box">
-                    <input type="checkbox" name="dishChoice">
-                </label>
-            </article>
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">
-                        Langouste rôtie</h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">Et ses légumes de saison
-                        </p>
-                        <p class="dishCard__subcontent-price">
-                            35€</p>
-                    </div>
-                    <label class="dishCard__box">
-                        <input type="checkbox" name="dishChoice">
-                    </label>
-                </div>
-            </article>
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">
-                        Côte de bœuf Angus</h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">
-                            Et sa purée de panais</p>
-                        <p class="dishCard__subcontent-price">
-                            44€</p>
-                    </div>
-                    <label class="dishCard__box">
-                        <input type="checkbox" name="dishChoice">
-                    </label>
-                </div>
-            </article>
-            <h2 class="menus__borderTitle fw300">
-                DESSERTS
-            </h2>
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">
-                        Farandole de desserts</h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">Du chef
-                        </p>
-                        <p class="dishCard__subcontent-price">
-                            18€</p>
-                    </div>
-                    <label class="dishCard__box">
-                        <input type="checkbox" name="dishChoice">
-                    </label>
-                </div>
-            </article>
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">
-                        Crème brulée</h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">Revisitée
-                        </p>
-                        <p class="dishCard__subcontent-price">
-                            22€
-                        </p>
-                    </div>
-                    <label class="dishCard__box">
-                        <input type="checkbox" name="dishChoice">
-                    </label>
-                </div>
-            </article>
-            <article class="dishCard">
-                <div class="dishCard__content">
-                    <h3 class="dishCard__title">Tiramisu
-                    </h3>
-                    <div class="dishCard__subcontent">
-                        <p class="dishCard__subcontent-subtitle">
-                            À la noisette
-                        </p>
-                        <p class="dishCard__subcontent-price">
-                            23€</p>
-                    </div>
-                </div>
-                <label class="dishCard__box">
-                    <input type="checkbox" name="dishChoice">
-                </label>
-            </article>
             <a class="cta" href="#">
                 <button class="btn">
                     Commander

@@ -42,29 +42,29 @@ main {
 .fonctionnement {
   @extend %margin-sections-accueil;
 
-  @media (min-width: 768px) {
-    width: 90rem;
-    margin: 0;
+  @media (min-width: 1024px) {
+    width: 100%;
     padding: 3.12rem 11.25rem;
+    margin: 0;
   }
   & h2 {
     padding: 0 0 1.63rem 0;
   }
 
   &__cards {
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       @include flex-row-center;
-      width: 98%;
+      gap: 2.28rem;
+      width: 100%;
     }
   }
 
   &__card {
     width: 100%;
-    max-width: 20.15rem;
+    max-width: 18rem;
     height: 4.52rem;
-    margin: auto;
     @extend %flex-row-center;
-    justify-content: flex-start;
+    margin: auto;
     position: relative;
     margin-bottom: 1.56rem;
     border-radius: 1.25rem;
@@ -72,16 +72,18 @@ main {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     gap: 2.28rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       width: 30%;
+      min-width: 13rem;
       gap: 1.3rem;
+      margin-left: 0;
     }
   }
   &_card p {
     width: auto;
     font-weight: 500;
   }
-  &_card_number {
+  &__card-number {
     position: absolute;
     left: -0.75rem;
     color: $text-white;
@@ -100,8 +102,8 @@ main {
     @extend %accueil-icone;
   }
   & .fa-store {
-    color: $primary;
     @extend %accueil-icone;
+    color: $primary;
   }
 }
 
@@ -111,7 +113,7 @@ main {
   background: $accueil_card-bgcolor;
   padding-bottom: 4.12rem;
   @media (min-width: 768px) {
-    padding: 0 11.25rem 1.88rem 11.25rem;
+    padding: 0 12.5% 1.88rem 12.5%;
   }
   & h2 {
     padding: 2rem 1.1rem;
@@ -124,7 +126,7 @@ main {
     gap: 1.12rem;
 
     @media (min-width: 768px) {
-      width: 67.5rem;
+      width: 100%;
       display: grid;
       grid-column: 1fr 1fr;
       grid-row: 1fr 1fr;

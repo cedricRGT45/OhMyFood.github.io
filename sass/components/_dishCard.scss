@@ -17,7 +17,6 @@
   overflow: hidden;
 
   @media (min-width: 768px) {
-    width: 100%;
     max-width: 39.62rem;
   }
 
@@ -133,6 +132,9 @@
     & input:checked {
       ~ .dishCard__box {
         transform: translateX(-3.65rem);
+        @media (min-width: 768px) {
+          transform: translateX(-100%);
+        }
       }
 
       ~ .dishCard__content {
@@ -148,6 +150,9 @@
 
       ~ .dishCard__subcontent {
         width: 82%;
+        @media (min-width: 768px) {
+          width: 90%;
+        }
       }
 
       ~ .dishCard__box::after {

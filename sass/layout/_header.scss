@@ -7,6 +7,10 @@
 .header {
   width: 100%;
   @extend %flex-column-center;
+  @media (min-width: 768px) {
+    height: 6rem;
+    justify-content: center;
+  }
   &__logo {
     width: 40%;
     max-width: 10.12rem;
@@ -36,5 +40,9 @@
     left: 0;
     padding: 0.3rem 0 0rem 1rem;
     color: $footer-bg;
+
+    @media (min-width: 768px) {
+      top: 2.4rem;
+    }
   }
 }

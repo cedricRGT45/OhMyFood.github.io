@@ -213,7 +213,7 @@ p {
   font-weight: 100;
 }
 
-.intro-content, .fonctionnement__card, .fonctionnement_card_number, .restaurants__cards-content, .header__location, .loader, .loader__lettre {
+.intro-content, .fonctionnement__card, .fonctionnement__card-number, .restaurants__cards-content, .header__location, .loader, .loader__lettre {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,6 +320,12 @@ p {
 .header {
   width: 100%;
 }
+@media (min-width: 768px) {
+  .header {
+    height: 6rem;
+    justify-content: center;
+  }
+}
 .header__logo {
   width: 40%;
   max-width: 10.12rem;
@@ -348,6 +354,11 @@ p {
   left: 0;
   padding: 0.3rem 0 0rem 1rem;
   color: #353535;
+}
+@media (min-width: 768px) {
+  .header .fa-arrow-left {
+    top: 2.4rem;
+  }
 }
 
 main {
@@ -386,30 +397,30 @@ main {
 }
 
 /*Fonctionnement*/
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .fonctionnement {
-    width: 90rem;
-    margin: 0;
+    width: 100%;
     padding: 3.12rem 11.25rem;
+    margin: 0;
   }
 }
 .fonctionnement h2 {
   padding: 0 0 1.63rem 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .fonctionnement__cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 98%;
+    gap: 2.28rem;
+    width: 100%;
   }
 }
 .fonctionnement__card {
   width: 100%;
-  max-width: 20.15rem;
+  max-width: 18rem;
   height: 4.52rem;
   margin: auto;
-  justify-content: flex-start;
   position: relative;
   margin-bottom: 1.56rem;
   border-radius: 1.25rem;
@@ -417,17 +428,19 @@ main {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   gap: 2.28rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .fonctionnement__card {
     width: 30%;
+    min-width: 13rem;
     gap: 1.3rem;
+    margin-left: 0;
   }
 }
 .fonctionnement_card p {
   width: auto;
   font-weight: 500;
 }
-.fonctionnement_card_number {
+.fonctionnement__card-number {
   position: absolute;
   left: -0.75rem;
   color: #fff;
@@ -448,7 +461,7 @@ main {
 }
 @media (min-width: 768px) {
   .restaurants {
-    padding: 0 11.25rem 1.88rem 11.25rem;
+    padding: 0 12.5% 1.88rem 12.5%;
   }
 }
 .restaurants h2 {
@@ -464,7 +477,7 @@ main {
 }
 @media (min-width: 768px) {
   .restaurants__cards {
-    width: 67.5rem;
+    width: 100%;
     display: grid;
     grid-column: 1fr 1fr;
     grid-row: 1fr 1fr;
@@ -680,7 +693,6 @@ main {
 }
 @media (min-width: 768px) {
   .dishCard {
-    width: 100%;
     max-width: 39.62rem;
   }
 }
@@ -782,6 +794,11 @@ main {
 .dishCard__content input:checked ~ .dishCard__box {
   transform: translateX(-3.65rem);
 }
+@media (min-width: 768px) {
+  .dishCard__content input:checked ~ .dishCard__box {
+    transform: translateX(-100%);
+  }
+}
 .dishCard__content input:checked ~ .dishCard__content {
   width: 85%;
 }
@@ -796,6 +813,11 @@ main {
 .dishCard__content input:checked ~ .dishCard__subcontent {
   width: 82%;
 }
+@media (min-width: 768px) {
+  .dishCard__content input:checked ~ .dishCard__subcontent {
+    width: 90%;
+  }
+}
 .dishCard__content input:checked ~ .dishCard__box::after {
   animation: spinningIn 700ms 200ms ease-in forwards;
 }
@@ -807,31 +829,48 @@ main {
   box-sizing: border-box;
 }
 
-.herolaNote {
+.bannerLaNote {
+  position: relative;
   width: 100%;
   height: 100%;
-  min-height: 19.18rem;
+  min-height: 20.13rem;
+  margin-bottom: -7.5%;
+  overflow: hidden;
   object-fit: cover;
 }
 @media (min-width: 768px) {
-  .herolaNote {
-    height: 23.93rem;
+  .bannerLaNote {
+    min-height: 23.93rem;
+    margin-bottom: -5%;
     overflow: hidden;
   }
 }
-.herolaNote__photo {
-  object-position: 0 -75px;
+.bannerLaNote__photo {
+  position: absolute;
+  object-position: 0 -65px;
+  z-index: -1;
 }
 @media (min-width: 768px) {
-  .herolaNote__photo {
-    object-position: 0 -200px;
+  .bannerLaNote__photo {
+    top: -50rem;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1260px) {
+  .bannerLaNote__photo {
+    top: -40rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bannerLaNote__photo {
+    top: -30rem;
   }
 }
 
 .banner {
   position: relative;
   width: 100%;
-  height: 17.18rem;
+  height: 100%;
+  min-height: 20.13rem;
   background: none;
   margin-bottom: -20%;
   overflow: hidden;
@@ -844,12 +883,13 @@ main {
 }
 .banner__photo {
   position: absolute;
-  min-height: 17.18rem;
+  min-height: 20.13rem;
   bottom: 7.5%;
   z-index: -1;
 }
 @media (min-width: 768px) {
   .banner__photo {
+    min-height: 23.93rem;
     bottom: -10rem;
   }
 }
@@ -862,7 +902,8 @@ main {
 }
 @media (min-width: 768px) {
   .menus {
-    width: 75%;
+    width: 90%;
+    max-width: 65.93rem;
     margin: 0 auto;
     padding-top: 3.19rem;
   }
