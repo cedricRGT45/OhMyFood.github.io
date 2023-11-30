@@ -78,6 +78,21 @@ main {
       gap: 1.3rem;
       margin-left: 0;
     }
+    &:nth-child(1):hover {
+      .fa-solid {
+        color: $primary;
+      }
+    }
+    &:nth-child(2):hover {
+      .fa-solid {
+        color: $primary;
+      }
+    }
+    &:nth-child(3):hover {
+      .fa-solid {
+        color: $primary;
+      }
+    }
   }
   &_card p {
     width: auto;
@@ -103,7 +118,6 @@ main {
   }
   & .fa-store {
     @extend %accueil-icone;
-    color: $primary;
   }
 }
 
