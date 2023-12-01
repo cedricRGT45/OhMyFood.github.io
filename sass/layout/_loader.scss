@@ -6,7 +6,6 @@
 /* loader */
 
 .loader {
-  display: none;
   @extend %flex-row-center;
   position: fixed;
   left: 0;

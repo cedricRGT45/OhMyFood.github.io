@@ -23,7 +23,7 @@ main {
   }
   &__photo {
     position: absolute;
-    object-position: 0 -65px;
+    top: -65px;
     z-index: -1;
     @media (min-width: 768px) {
       top: -50rem;

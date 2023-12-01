@@ -1,9 +1,4 @@
-@use "base/reset";
+@use "layout";
+@use "components";
 @use "utils";
-@use "layout/loader";
-@use "layout/header";
-@use "layout/index";
-@use "components/buttons";
-@use "layout/footer";
-@use "base/typography";
-@use "layout/restaurants";
+@use "base";

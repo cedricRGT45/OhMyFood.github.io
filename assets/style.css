@@ -1,46 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
-/* makes sizing simpler */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* remove default spacing */
-/* force styling of type through styling, rather than elements */
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-/* min body height */
-body {
-  min-height: 100vh;
-  max-width: 1440px;
-  margin: auto;
-}
-
-/* responsive images/videos */
-img {
-  display: block;
-  max-width: 100%;
-}
-
-menu,
-ol,
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /*Loader'keyframes*/
 @keyframes crescendo {
   0% {
@@ -176,7 +133,6 @@ a {
     transform: translateX(0);
   }
 }
-/*Mixin for pseudo-elements*/
 /*colors*/
 /*Button*/
 /*breakpoints*/
@@ -258,7 +214,6 @@ p {
 
 /* loader */
 .loader {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -361,6 +316,7 @@ p {
   }
 }
 
+/*Mixin for pseudo-elements*/
 main {
   object-fit: cover;
 }
@@ -558,126 +514,6 @@ main {
   height: 0px;
 }
 
-/*Style du bouton*/
-.btn {
-  width: 13.62rem;
-  height: 3.12rem;
-  margin: auto;
-  border: none;
-  color: #fff;
-  font-family: "roboto", sans-serif;
-  border-radius: 1.56rem;
-  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
-  padding: 0.81rem 1.17rem;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 1;
-}
-.btn:after {
-  content: "";
-  height: 3.12rem;
-  border: none;
-  border-radius: 1.56rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  transition: opacity 250ms;
-  z-index: -1;
-}
-.btn:active:after {
-  opacity: 1;
-}
-.btn:hover:after {
-  opacity: 1;
-}
-
-/*Bouton favoris coeur*/
-.Heart {
-  width: 1.35rem;
-  position: relative;
-  cursor: pointer;
-}
-.Heart__likeButton::after {
-  content: "\f004";
-  font: var(--fa-font-solid);
-  font-size: 1.37rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: O;
-  opacity: 0;
-  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
-  -webkit-font-smoothing: antialiased;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.Heart__likeButton .fa-heart {
-  font-size: 1.37rem;
-}
-.Heart input:hover + .Heart__likeButton .fa-heart {
-  transform: scale(1.15);
-}
-.Heart input:hover + .Heart__likeButton::after {
-  transform: scale(1.15);
-}
-.Heart input:checked + .Heart__likeButton .fa-heart {
-  animation: fadeOut 700ms forwards;
-}
-.Heart input:checked + .Heart__likeButton::after {
-  animation: fadeIn 700ms ease-in forwards;
-}
-.Heart input:not(:checked) + .Heart__likeButton::after {
-  animation: spinningOut 700ms ease-out;
-}
-.Heart input:not(:checked) + .Heart__likeButton .fa-heart {
-  animation: fadeIn 400ms ease-in forwards;
-}
-
-.footer {
-  gap: 1rem;
-  padding: 1.38rem 1.56rem;
-  background: #353535;
-}
-@media (min-width: 768px) {
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    gap: 3rem;
-  }
-}
-.footer__title {
-  color: #fff;
-}
-.footer__nav {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .footer__nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  .footer__nav :nth-child(3) {
-    margin-left: 1.5rem;
-  }
-}
-.footer__nav-link {
-  color: #fff;
-  text-decoration: none;
-  gap: 1rem;
-  margin: 0.44rem;
-}
-.footer__nav-linkIcon {
-  width: 1rem;
-}
-
 .dishCard {
   position: relative;
   width: 100%;
@@ -852,7 +688,7 @@ main {
 }
 .bannerLaNote__photo {
   position: absolute;
-  object-position: 0 -65px;
+  top: -65px;
   z-index: -1;
 }
 @media (min-width: 768px) {
@@ -958,4 +794,167 @@ main {
 
 .cta {
   margin: 2.5rem auto 0 auto;
+}
+
+.footer {
+  gap: 1rem;
+  padding: 1.38rem 1.56rem;
+  background: #353535;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+}
+.footer__title {
+  color: #fff;
+}
+.footer__nav {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .footer__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .footer__nav :nth-child(3) {
+    margin-left: 1.5rem;
+  }
+}
+.footer__nav-link {
+  color: #fff;
+  text-decoration: none;
+  gap: 1rem;
+  margin: 0.44rem;
+}
+.footer__nav-linkIcon {
+  width: 1rem;
+}
+
+/*Style du bouton*/
+.btn {
+  width: 13.62rem;
+  height: 3.12rem;
+  margin: auto;
+  border: none;
+  color: #fff;
+  font-family: "roboto", sans-serif;
+  border-radius: 1.56rem;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  padding: 0.81rem 1.17rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.btn:after {
+  content: "";
+  height: 3.12rem;
+  border: none;
+  border-radius: 1.56rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 250ms;
+  z-index: -1;
+}
+.btn:active:after {
+  opacity: 1;
+}
+.btn:hover:after {
+  opacity: 1;
+}
+
+/*Bouton favoris coeur*/
+.Heart {
+  width: 1.35rem;
+  position: relative;
+  cursor: pointer;
+}
+.Heart__likeButton::after {
+  content: "\f004";
+  font: var(--fa-font-solid);
+  font-size: 1.37rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: O;
+  opacity: 0;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-font-smoothing: antialiased;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Heart__likeButton .fa-heart {
+  font-size: 1.37rem;
+}
+.Heart input:hover + .Heart__likeButton .fa-heart {
+  transform: scale(1.15);
+}
+.Heart input:hover + .Heart__likeButton::after {
+  transform: scale(1.15);
+}
+.Heart input:checked + .Heart__likeButton .fa-heart {
+  animation: fadeOut 700ms forwards;
+}
+.Heart input:checked + .Heart__likeButton::after {
+  animation: fadeIn 700ms ease-in forwards;
+}
+.Heart input:not(:checked) + .Heart__likeButton::after {
+  animation: spinningOut 700ms ease-out;
+}
+.Heart input:not(:checked) + .Heart__likeButton .fa-heart {
+  animation: fadeIn 400ms ease-in forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* min body height */
+body {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* responsive images/videos */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }/*# sourceMappingURL=style.css.map */
