@@ -580,11 +580,14 @@ a {
     max-width: 39.62rem;
   }
 }
-.dishCard:nth-child(n+1):nth-child(n+6) {
+.dishCard--1 {
   animation-delay: 300ms;
 }
-.dishCard:nth-child(n+7):nth-child(n+10) {
-  animation-delay: 500ms;
+.dishCard--2 {
+  animation-delay: 600ms;
+}
+.dishCard--3 {
+  animation-delay: 900ms;
 }
 .dishCard__title {
   width: 100%;

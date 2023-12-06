@@ -109,14 +109,13 @@ main {
       margin: 2.5rem 0 0.75rem 0;
     }
 
-    // animation sur les sous-titres
     &-borderTitle {
       width: 2.5rem;
       font-size: 1rem;
       line-height: 2rem;
       border-bottom: 0.18rem solid $tertiary;
       padding-left: 0;
-      animation: crescendo reverse 3000ms forwards;
+      animation: crescendo reverse 3000ms forwards; // animation des titres des services
     }
   }
 }
