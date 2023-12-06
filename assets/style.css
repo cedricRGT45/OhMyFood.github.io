@@ -629,6 +629,8 @@ a {
   align-items: center;
   border-radius: 0 0.94rem 0.94rem 0rem;
   background: #99e2d0;
+  transition: transform 1s ease-in-out;
+  transform: translateX(0);
 }
 .dishCard__box::after {
   content: "\f00c";
@@ -647,25 +649,17 @@ a {
   animation: spinningOut 1s ease-out;
 }
 
-.dishCard__box {
-  transition: transform 1s ease-in-out;
-  transform: translateX(0);
-}
-
 input:checked + .dishCard__box {
   transform: translateX(-3.68rem);
 }
-
+input:checked + .dishCard__box::after {
+  animation: spinningIn 700ms 200ms ease-in;
+}
 input:checked ~ .dishCard__title {
   width: 80%;
 }
-
 input:checked ~ .dishCard__price {
   margin-right: 4.9rem;
-}
-
-input:checked + .dishCard__box::after {
-  animation: spinningIn 700ms 200ms ease-in;
 }
 
 main {
