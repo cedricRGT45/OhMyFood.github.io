@@ -7,10 +7,12 @@
 .btn {
   width: 13.62rem;
   height: 3.12rem;
-  margin: auto;
+  @extend %flex-row-center;
+  align-items: center;
   border: none;
   color: $text-white;
   font-family: $text-font;
+  text-align: center;
   border-radius: $button-border-rad;
   background: $button-gradient-1;
   padding: 0.81rem 1.17rem;
@@ -50,9 +52,24 @@
 /*Bouton favoris coeur*/
 
 .Heart {
-  width: 1.35rem;
-  position: relative;
+  width: 1.37rem;
+  position: absolute;
   cursor: pointer;
+  &__accueil {
+    bottom: 1.75rem;
+    right: 1.5rem;
+  }
+  &__restaurant {
+    left: 18.75rem;
+    @media (min-width: 768px) {
+      top: 0.65rem;
+      bottom: 0;
+      left: 30rem;
+    }
+    @media (max-width: 345px) {
+      left: 90%;
+    }
+  }
 
   &__likeButton::after {
     content: "\f004";
@@ -62,7 +79,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    left: O;
+    left: 0;
     opacity: 0;
     background: $button-gradient-1;
     -webkit-font-smoothing: antialiased;

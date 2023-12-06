@@ -1,8 +1,11 @@
+/*Permet à la page de descendre progressivement plutot que de sauter
+au clique d'une ancre*/
+
 html {
   scroll-behavior: smooth;
 }
 
-/* makes sizing simpler */
+/* inclus les bordures pour les dimensions */
 
 *,
 *::before,
@@ -10,8 +13,7 @@ html {
   box-sizing: border-box;
 }
 
-/* remove default spacing */
-/* force styling of type through styling, rather than elements */
+/* reset toutes les marges et padding pour un comportement cohérent */
 
 * {
   margin: 0;
@@ -19,7 +21,7 @@ html {
   font: inherit;
 }
 
-/* min body height */
+/* indique une hauteur d'écran responsive et une largeur max, ainsi qu'une position centrée */
 
 body {
   min-height: 100vh;
@@ -27,15 +29,17 @@ body {
   margin: auto;
 }
 
-/* responsive images/videos */
+/* responsive images/*/
 img {
   display: block;
   max-width: 100%;
 }
 
+/*annule le style des liens et liste*/
 menu,
 ol,
-ul {
+ul,
+li {
   list-style: none;
 }
 

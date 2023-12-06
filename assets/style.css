@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Loader'keyframes*/
 @keyframes crescendo {
   0% {
@@ -169,13 +170,13 @@ p {
   font-weight: 100;
 }
 
-.intro-content, .fonctionnement__card, .fonctionnement__card-number, .restaurants__cards-content, .header__location, .loader, .loader__lettre {
+.btn, .fonctionnement__card, .fonctionnement__card-number, .restaurants__cards-content, .header__location, .loader, .loader__lettre {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.restaurants__cards, .header {
+.intro-content, .restaurants__cards, .header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,7 +233,7 @@ p {
 .loader__lettre {
   font-size: 2rem;
   color: #9356dc;
-  letter-spacing: 1 rem;
+  letter-spacing: 1rem;
   animation: flash 3000ms, crescendo 3000ms;
 }
 @media (min-width: 768px) {
@@ -329,20 +330,18 @@ main {
 .intro-content {
   width: 100%;
   padding: 2.44rem 0 3.56rem 0;
-  flex-direction: column;
   text-align: center;
 }
 .intro-content h1 {
   margin: 0 2.63rem;
   width: 17.18rem;
 }
-@media (min-width: 768px) {
+@media (min-bwidth: 768px) {
   .intro-content h1 {
     width: 40.31rem;
   }
 }
 .intro-content p {
-  width: 19.68;
   margin: 0.5rem 1.63rem 1.69rem 2.12rem;
   font-weight: 300;
 }
@@ -361,7 +360,7 @@ main {
   }
 }
 .fonctionnement h2 {
-  padding: 0 0 1.63rem 0;
+  padding: 0 0 1.63rem 0.5rem;
 }
 @media (min-width: 1024px) {
   .fonctionnement__cards {
@@ -392,15 +391,6 @@ main {
     margin-left: 0;
   }
 }
-.fonctionnement__card:nth-child(1):hover .fa-solid {
-  color: #9356dc;
-}
-.fonctionnement__card:nth-child(2):hover .fa-solid {
-  color: #9356dc;
-}
-.fonctionnement__card:nth-child(3):hover .fa-solid {
-  color: #9356dc;
-}
 .fonctionnement_card p {
   width: auto;
   font-weight: 500;
@@ -415,6 +405,13 @@ main {
   border-radius: 1.5rem;
   background: #9356dc;
 }
+.fonctionnement .fa-mobile-screen-button {
+  margin-left: 2rem;
+}
+.fonctionnement .fa-store {
+  color: #9356dc;
+}
+
 /* Cartes des restaurants*/
 .restaurants {
   background: #f6f6f6;
@@ -440,8 +437,8 @@ main {
   .restaurants__cards {
     width: 100%;
     display: grid;
-    grid-column: 1fr 1fr;
-    grid-row: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     margin-bottom: 1.88rem;
     gap: 6.25rem;
   }
@@ -514,6 +511,52 @@ main {
   height: 0px;
 }
 
+/*Permet à la page de descendre progressivement plutot que de sauter
+au clique d'une ancre*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* inclus les bordures pour les dimensions */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* reset toutes les marges et padding pour un comportement cohérent */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* indique une hauteur d'écran responsive et une largeur max, ainsi qu'une position centrée */
+body {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* responsive images/*/
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*annule le style des liens et liste*/
+menu,
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .dishCard {
   position: relative;
   width: 100%;
@@ -529,7 +572,7 @@ main {
   background: var(--White, #fff);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: crescendo reverse 2250ms forwards, translateToRight 2250ms forwards;
+  animation: crescendo reverse 1000ms forwards, translateToRight 750ms forwards;
   opacity: 0;
 }
 @media (min-width: 768px) {
@@ -538,34 +581,51 @@ main {
   }
 }
 .dishCard:nth-child(n+1):nth-child(n+6) {
-  animation-delay: 500ms;
+  animation-delay: 300ms;
 }
 .dishCard:nth-child(n+7):nth-child(n+10) {
-  animation-delay: 750ms;
+  animation-delay: 500ms;
 }
-.dishCard__content {
-  width: 17.93rem;
-  display: flex;
-  flex-direction: column;
-  font-family: Roboto, sans-serif;
+.dishCard__title {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: width 1s ease-in-out;
 }
-.dishCard__content input {
-  display: none;
+.dishCard__title-strong {
+  font-family: "roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 900;
 }
+.dishCard__title-subtitle {
+  margin-top: 0.5rem;
+  font-family: "roboto", sans-serif;
+  font-size: 0.94019rem;
+  font-weight: 300;
+}
+.dishCard__price {
+  margin: 1.25rem 1rem 0 1rem;
+  color: #353535;
+  font-family: "roboto", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 700;
+  transition: margin 1s ease-in-out;
+}
+
 .dishCard__box {
   position: absolute;
   top: 0;
   left: 100%;
   bottom: 0;
   right: 0;
-  width: 100%;
-  max-width: 3.68rem;
+  width: 3.68rem;
   height: 100%;
   display: flex;
   align-items: center;
   border-radius: 0 0.94rem 0.94rem 0rem;
   background: #99e2d0;
-  transition: transform 1s ease-in-out;
 }
 .dishCard__box::after {
   content: "\f00c";
@@ -583,84 +643,26 @@ main {
   color: #99e2d0;
   animation: spinningOut 1s ease-out;
 }
-@media (min-width: 768px) {
-  .dishCard__box {
-    left: 39.7rem;
-  }
+
+.dishCard__box {
+  transition: transform 1s ease-in-out;
+  transform: translateX(0);
 }
-.dishCard__title {
+
+input:checked + .dishCard__box {
+  transform: translateX(-3.68rem);
+}
+
+input:checked ~ .dishCard__title {
   width: 80%;
-  margin: 0;
-  font-size: 1.12rem;
-  font-weight: 500;
-  font-family: Roboto, sans-serif;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: width 1s ease-in-out;
 }
-.dishCard__subcontent {
-  width: 100%;
-  display: flex;
-  padding: 0.31rem 0 0 0;
-  color: #000;
-  white-space: nowrap;
-  transition: width 1s ease-in-out;
+
+input:checked ~ .dishCard__price {
+  margin-right: 4.9rem;
 }
-.dishCard__subcontent-subtitle {
-  width: 20rem;
-  margin: 0;
-  font-size: 0.94rem;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 0.5rem;
-}
-@media (min-width: 768px) {
-  .dishCard__subcontent-subtitle {
-    width: 36rem;
-  }
-}
-.dishCard__subcontent-price {
-  text-align: end;
-  color: #353535;
-  padding: 0 0.94rem 0 0;
-  font-size: 0.94rem;
-  font-weight: 700;
-}
-.dishCard__content {
-  transition: width 1s ease-in-out;
-  width: 100%;
-}
-.dishCard__content input:checked ~ .dishCard__box {
-  transform: translateX(-3.65rem);
-}
-@media (min-width: 768px) {
-  .dishCard__content input:checked ~ .dishCard__box {
-    transform: translateX(-100%);
-  }
-}
-.dishCard__content input:checked ~ .dishCard__content {
-  width: 85%;
-}
-@media (min-width: 768px) {
-  .dishCard__content input:checked ~ .dishCard__content {
-    width: 93%;
-  }
-}
-.dishCard__content input:checked ~ .dishCard__title {
-  width: 70%;
-}
-.dishCard__content input:checked ~ .dishCard__subcontent {
-  width: 82%;
-}
-@media (min-width: 768px) {
-  .dishCard__content input:checked ~ .dishCard__subcontent {
-    width: 90%;
-  }
-}
-.dishCard__content input:checked ~ .dishCard__box::after {
-  animation: spinningIn 700ms 200ms ease-in forwards;
+
+input:checked + .dishCard__box::after {
+  animation: spinningIn 700ms 200ms ease-in;
 }
 
 main {
@@ -753,10 +755,14 @@ main {
   width: 100%;
   align-items: center;
   gap: 0.75rem;
+  position: relative;
 }
 @media (min-width: 768px) {
   .menus__titleBar {
+    width: 90%;
+    max-width: 39.62rem;
     justify-content: center;
+    margin: auto;
   }
 }
 .menus__titleBar-title {
@@ -793,7 +799,7 @@ main {
 }
 
 .cta {
-  margin: 2.5rem auto 0 auto;
+  margin: 2.5rem auto;
 }
 
 .footer {
@@ -839,10 +845,11 @@ main {
 .btn {
   width: 13.62rem;
   height: 3.12rem;
-  margin: auto;
+  align-items: center;
   border: none;
   color: #fff;
   font-family: "roboto", sans-serif;
+  text-align: center;
   border-radius: 1.56rem;
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   padding: 0.81rem 1.17rem;
@@ -875,9 +882,28 @@ main {
 
 /*Bouton favoris coeur*/
 .Heart {
-  width: 1.35rem;
-  position: relative;
+  width: 1.37rem;
+  position: absolute;
   cursor: pointer;
+}
+.Heart__accueil {
+  bottom: 1.75rem;
+  right: 1.5rem;
+}
+.Heart__restaurant {
+  left: 18.75rem;
+}
+@media (min-width: 768px) {
+  .Heart__restaurant {
+    top: 0.65rem;
+    bottom: 0;
+    left: 30rem;
+  }
+}
+@media (max-width: 345px) {
+  .Heart__restaurant {
+    left: 90%;
+  }
 }
 .Heart__likeButton::after {
   content: "\f004";
@@ -887,7 +913,7 @@ main {
   top: 0;
   bottom: 0;
   right: 0;
-  left: O;
+  left: 0;
   opacity: 0;
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-font-smoothing: antialiased;
@@ -914,47 +940,4 @@ main {
 }
 .Heart input:not(:checked) + .Heart__likeButton .fa-heart {
   animation: fadeIn 400ms ease-in forwards;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* makes sizing simpler */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* remove default spacing */
-/* force styling of type through styling, rather than elements */
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-/* min body height */
-body {
-  min-height: 100vh;
-  max-width: 1440px;
-  margin: auto;
-}
-
-/* responsive images/videos */
-img {
-  display: block;
-  max-width: 100%;
-}
-
-menu,
-ol,
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }/*# sourceMappingURL=style.css.map */

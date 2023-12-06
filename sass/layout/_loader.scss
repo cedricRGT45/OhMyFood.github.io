@@ -27,7 +27,7 @@
     @extend %flex-row-center;
     font-size: 2rem;
     color: #9356dc;
-    letter-spacing: 1 rem;
+    letter-spacing: 1rem;
     animation: flash 3000ms, crescendo 3000ms;
     @media (min-width: 768px) {
       font-size: 5rem;

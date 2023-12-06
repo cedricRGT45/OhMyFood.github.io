@@ -1,4 +1,5 @@
 @use "../utils" as *;
+@use "../base" as *;
 
 .dishCard {
   position: relative;
@@ -15,149 +16,101 @@
   background: var(--White, #fff);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-
   @media (min-width: 768px) {
     max-width: 39.62rem;
   }
 
   //Apparition des cartes progressive
 
-  animation: crescendo reverse 2250ms forwards, translateToRight 2250ms forwards;
+  animation: crescendo reverse 1000ms forwards, translateToRight 750ms forwards;
   opacity: 0;
 
   &:nth-child(n + 1):nth-child(n + 6) {
-    animation-delay: 500ms;
+    animation-delay: 300ms;
   }
 
   &:nth-child(n + 7):nth-child(n + 10) {
-    animation-delay: 750ms;
+    animation-delay: 500ms;
   }
 
-  &__content {
-    width: 17.93rem;
-    display: flex;
-    flex-direction: column;
-    font-family: Roboto, sans-serif;
-    & input {
-      display: none;
-    }
-  }
-
-  //checkbox de sélection du plat
-
-  &__box {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    max-width: 3.68rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 0 0.94rem 0.94rem 0rem;
-    background: $tertiary;
-    transition: transform 1s ease-in-out;
-
-    //case cochée
-
-    &::after {
-      content: "\f00c";
-      font: var(--fa-font-solid);
-      -webkit-font-smoothing: antialiased;
-      -webkit-background-clip: text;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 1.2rem;
-      height: 1.2rem;
-      margin: auto;
-      border-radius: 50% 50%;
-      background: white;
-      color: #99e2d0;
-      animation: spinningOut 1s ease-out;
-    }
-    @media (min-width: 768px) {
-      left: 39.7rem;
-    }
-  }
+  //Animation de sélection des plats
 
   &__title {
-    width: 80%;
+    width: 100%;
     margin: 0;
-    font-size: 1.12rem;
-    font-weight: 500;
-    font-family: Roboto, sans-serif;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     transition: width 1s ease-in-out;
-  }
-  &__subcontent {
-    width: 100%;
-    display: flex;
-    padding: 0.31rem 0 0 0;
-    color: #000;
-    white-space: nowrap;
-    transition: width 1s ease-in-out;
+    &-strong {
+      font-family: $text-font;
+      font-size: 1.125rem;
+      font-weight: 900;
+    }
     &-subtitle {
-      width: 20rem;
-      margin: 0;
-      font-size: 0.94rem;
+      margin-top: 0.5rem;
+      font-family: $text-font;
+      font-size: 0.94019rem;
       font-weight: 300;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding-right: 0.5rem;
-      @media (min-width: 768px) {
-        width: 36rem;
-      }
-    }
-    &-price {
-      text-align: end;
-      color: #353535;
-      padding: 0 0.94rem 0 0;
-      font-size: 0.94rem;
-      font-weight: 700;
-      @media (min-width: 768px) {
-      }
     }
   }
-  &__content {
-    transition: width 1s ease-in-out;
-    width: 100%;
-
-    //animation de la checkbox
-
-    & input:checked {
-      ~ .dishCard__box {
-        transform: translateX(-3.65rem);
-        @media (min-width: 768px) {
-          transform: translateX(-100%);
-        }
-      }
-
-      ~ .dishCard__content {
-        width: 85%;
-        @media (min-width: 768px) {
-          width: 93%;
-        }
-      }
-
-      ~ .dishCard__title {
-        width: 70%;
-      }
-
-      ~ .dishCard__subcontent {
-        width: 82%;
-        @media (min-width: 768px) {
-          width: 90%;
-        }
-      }
-
-      ~ .dishCard__box::after {
-        animation: spinningIn 700ms 200ms ease-in forwards;
-      }
-    }
+  &__price {
+    margin: 1.25rem 1rem 0 1rem;
+    color: #353535;
+    font-family: $text-font;
+    font-size: 0.94rem;
+    font-weight: 700;
+    transition: margin 1s ease-in-out;
   }
+}
+
+.dishCard__box {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  bottom: 0;
+  right: 0;
+  width: 3.68rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0.94rem 0.94rem 0rem;
+  background: #99e2d0;
+
+  &::after {
+    content: "\f00c";
+    font: var(--fa-font-solid);
+    -webkit-font-smoothing: antialiased;
+    -webkit-background-clip: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: auto;
+    border-radius: 50% 50%;
+    background: white;
+    color: #99e2d0;
+    animation: spinningOut 1s ease-out;
+  }
+}
+
+.dishCard__box {
+  transition: transform 1s ease-in-out;
+  transform: translateX(0);
+}
+
+input:checked + .dishCard__box {
+  transform: translateX(-3.68rem);
+}
+
+input:checked ~ .dishCard__title {
+  width: 80%;
+}
+input:checked ~ .dishCard__price {
+  margin-right: 4.9rem;
+}
+
+input:checked + .dishCard__box::after {
+  animation: spinningIn 700ms 200ms ease-in;
 }

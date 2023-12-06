@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset='utf-8'>
     <title>Oh my Food</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='../assets/style.css'>
-    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+    <link rel="shortcut icon" href="../assets/images/favicon.png">
     <script src="https://kit.fontawesome.com/adf26ee57a.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,17 +21,19 @@
         <img class="header__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo de Oh my Food">
     </header>
     <main>
-        <section class="banner">
-            <img class="banner__photo" src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                alt="Photographie d'un plat du restaurant À la française">
-        </section>
+        <div class="banner">
+            <div class="banner__photo">
+                <img src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                    alt="Photographie d'un plat du restaurant À la française">
+            </div>
+        </div>
 
         <!-- section des menus -->
 
         <section class="menus">
             <div class="menus__titleBar">
                 <h1 class="menus__titleBar-title fw400">À la française</h1>
-                <label class="Heart">
+                <label class="Heart Heart__restaurant">
                     <input type="checkbox" class="hidden">
                     <span class="Heart__likeButton"><i class="fa-regular fa-heart"></i></span>
                 </label>
@@ -39,150 +41,100 @@
 
             <!-- Description des plats -->
             <div class="menus__dishcards">
-                <h2 class="menus__dishcards-borderTitle
-                 fw300">ENTRÉES</h2>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">Tartare de poulpe acidulé</h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">Aux zestes d'orange</p>
-                            <p class="dishCard__subcontent-price">
-                                25€</p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">
-                            Velouté de légumes d'antan</h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">Carotte, panais, topinambour</p>
-                            <p class="dishCard__subcontent-price">
-                                35€</p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">
-                            Soupe à l'oignon
-                        </h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">Revisitée</p>
-                            <p class="dishCard__subcontent-price">
-                                20€</p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
+                <!-- Barre de soulignement des sous-titres -->
+                <h2 class="menus__dishcards-borderTitle fw300">ENTRÈE</h2>
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Tartare de poulpe acidulé
+                        </span><br><span class="dishCard__title-subtitle">Aux zestes d'orange
+                        </span></span>
+                    <span class="dishCard__price">
+                        25€</span>
+                </label>
+
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Velouté de légumes d'antan
+                        </span><br><span class="dishCard__title-subtitle">Carotte, panais, topinambour
+                        </span></span>
+                    <span class="dishCard__price">
+                        35€</span>
+                </label>
+
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Soupe à l'oignon
+                        </span><br><span class="dishCard__title-subtitle">Revisitée
+                        </span></span>
+                    <span class="dishCard__price">
+                        20€</span>
+                </label>
+
                 <h2 class="menus__dishcards-borderTitle fw300">PLATS</h2>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">Coquilles Saint-Jacques
-                        </h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">Accompagnées d'une purée de panais
-                            </p>
-                            <p class="dishCard__subcontent-price">
-                                40€</p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">
-                            Magret de canard</h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">Et parmentier de pommes de terre
-                            </p>
-                            <p class="dishCard__subcontent-price">
-                                35€</p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">
-                            Pigeonneau d’Ille-et-Vilaine</h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">
-                                Sur son lit de gnocchis aux légumes</p>
-                            <p class="dishCard__subcontent-price">
-                                44€</p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Coquilles Saint-Jacques
+                        </span><br><span class="dishCard__title-subtitle">Accompagnées d'une purée de panais
+                        </span></span>
+                    <span class="dishCard__price">
+                        40€</span>
+                </label>
+
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Magret de canard
+                        </span><br><span class="dishCard__title-subtitle">Et parmentier de pommes de terre
+                        </span></span>
+                    <span class="dishCard__price">
+                        35€</span>
+                </label>
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Pigeonneau d’Ille-et-Vilaine
+                        </span><br><span class="dishCard__title-subtitle">Sur son lit de gnocchis aux légumes
+                        </span></span>
+                    <span class="dishCard__price">
+                        44€</span>
+                </label>
+
                 <h2 class="menus__dishcards-borderTitle fw300">
                     DESSERTS
                 </h2>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">
-                            Pétales de violettes glacés</h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">Et purée de noisettes
-                            </p>
-                            <p class="dishCard__subcontent-price">
-                                18€</p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">
-                            Fondant au chocolat</h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">Revisité
-                            </p>
-                            <p class="dishCard__subcontent-price">
-                                22€
-                            </p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
-                <article class="dishCard">
-                    <label class="dishCard__content">
-                        <input type="checkbox" name="dishChoice">
-                        <h3 class="dishCard__title">Millefeuille croustillant
-                        </h3>
-                        <div class="dishCard__subcontent">
-                            <p class="dishCard__subcontent-subtitle">Myrtilles et pâte d’amande
-                            </p>
-                            <p class="dishCard__subcontent-price">
-                                23€</p>
-                        </div>
-                        <div class="dishCard__box">
-                        </div>
-                    </label>
-                </article>
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Pétales de violettes glacés
+                        </span><br><span class="dishCard__title-subtitle">Et purée de noisettes</span></span>
+                    <span class="dishCard__price">
+                        18€</span>
+                </label>
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Fondant au chocolat
+                        </span><br><span class="dishCard__title-subtitle">Revisité
+                        </span></span>
+                    <span class="dishCard__price">
+                        22€</span>
+                </label>
+                <label class="dishCard">
+                    <input type="checkbox" name="checkbox" class="hidden">
+                    <span class="dishCard__box"></span>
+                    <span class="dishCard__title"><span class="dishCard__title-strong">Millefeuille croustillant
+                        </span><br><span class="dishCard__title-subtitle">Myrtilles et pâte d’amande
+                        </span></span>
+                    <span class="dishCard__price">
+                        23€</span>
+                </label>
             </div>
-            <a class="cta" href="#">
-                <button class="btn">
-                    Commander
-                </button>
+            <a class="cta btn" href="#">
+                Commander
             </a>
         </section>
     </main>
@@ -200,7 +152,7 @@
             <a href="#" class="footer__nav-link fw400">
                 <p>Mentions légales</p>
             </a>
-            <a href="#" class="footer__nav-link fw400">
+            <a href="mailto:contact@ohmyfood.fr" class="footer__nav-link fw400">
                 <p>Contact</p>
             </a>
         </nav>

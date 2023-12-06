@@ -80,8 +80,12 @@ main {
     @extend %flex-row-flexStart;
     align-items: center;
     gap: 0.75rem;
+    position: relative;
     @media (min-width: 768px) {
+      width: 90%;
+      max-width: 39.62rem;
       justify-content: center;
+      margin: auto;
     }
     &-title {
       font-size: 1.75rem;
@@ -117,5 +121,5 @@ main {
   }
 }
 .cta {
-  margin: 2.5rem auto 0 auto;
+  margin: 2.5rem auto;
 }

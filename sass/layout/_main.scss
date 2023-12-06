@@ -15,19 +15,17 @@ main {
 .intro-content {
   width: 100%;
   padding: 2.44rem 0 3.56rem 0;
-  @extend %flex-row-center;
-  flex-direction: column;
+  @extend %flex-column-center;
   text-align: center;
   & h1 {
     margin: 0 2.63rem;
     width: 17.18rem;
 
-    @media (min-width: 768px) {
+    @media (min-bwidth: 768px) {
       width: 40.31rem;
     }
   }
   & p {
-    width: 19.68;
     margin: 0.5rem 1.63rem 1.69rem 2.12rem;
     font-weight: 300;
 
@@ -48,7 +46,7 @@ main {
     margin: 0;
   }
   & h2 {
-    padding: 0 0 1.63rem 0;
+    padding: 0 0 1.63rem 0.5rem;
   }
 
   &__cards {
@@ -78,21 +76,6 @@ main {
       gap: 1.3rem;
       margin-left: 0;
     }
-    &:nth-child(1):hover {
-      .fa-solid {
-        color: $primary;
-      }
-    }
-    &:nth-child(2):hover {
-      .fa-solid {
-        color: $primary;
-      }
-    }
-    &:nth-child(3):hover {
-      .fa-solid {
-        color: $primary;
-      }
-    }
   }
   &_card p {
     width: auto;
@@ -112,12 +95,14 @@ main {
 
   & .fa-mobile-screen-button {
     @extend %accueil-icone;
+    margin-left: 2rem;
   }
   & .fa-list-ul {
     @extend %accueil-icone;
   }
   & .fa-store {
     @extend %accueil-icone;
+    color: $primary;
   }
 }
 
@@ -142,8 +127,8 @@ main {
     @media (min-width: 768px) {
       width: 100%;
       display: grid;
-      grid-column: 1fr 1fr;
-      grid-row: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       margin-bottom: 1.88rem;
       gap: 6.25rem;
       & :nth-child(1) {
