@@ -68,7 +68,7 @@ main {
     border-radius: 1.25rem;
     background: $accueil_card-bgcolor;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    gap: 2.28rem;
+    gap: 1.5rem;
 
     @media (min-width: 1024px) {
       width: 30%;
@@ -95,7 +95,7 @@ main {
 
   & .fa-mobile-screen-button {
     @extend %accueil-icone;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
   & .fa-list-ul {
     @extend %accueil-icone;

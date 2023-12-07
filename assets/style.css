@@ -200,7 +200,6 @@ p {
   width: 0.81rem;
   height: 1.24rem;
   color: #7e7e7e;
-  margin-left: 1.5rem;
 }
 
 .footer__title, .menus__titleBar-title {
@@ -381,7 +380,7 @@ main {
   border-radius: 1.25rem;
   background: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  gap: 2.28rem;
+  gap: 1.5rem;
 }
 @media (min-width: 1024px) {
   .fonctionnement__card {
@@ -406,7 +405,7 @@ main {
   background: #9356dc;
 }
 .fonctionnement .fa-mobile-screen-button {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 .fonctionnement .fa-store {
   color: #9356dc;
