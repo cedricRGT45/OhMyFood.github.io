@@ -26,10 +26,15 @@
   }
 }
 @keyframes hide-loader {
+  0% {
+    z-index: 100;
+  }
   95% {
+    z-index: 100;
     opacity: 1;
   }
   100% {
+    z-index: -100;
     display: none;
     opacity: 0;
   }
@@ -218,7 +223,6 @@ p {
   font-family: "Shrikhand", serif;
   background: white;
   animation: hide-loader 3000ms forwards; /*fait disparaitre le loader*/
-  z-index: 100;
   margin: 0;
   overflow: hidden;
   /*Style et animation des lettres*/
