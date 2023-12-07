@@ -30,6 +30,7 @@
   width: 0.81rem;
   height: 1.24rem;
   color: #7e7e7e;
+  margin-left: 1rem;
 }
 
 %fa-heart-font {
@@ -49,4 +50,9 @@
 
 %padding-menus {
   padding: 2.5rem 1.06rem 0 1.06rem;
+}
+
+%content-center {
+  max-width: 90rem;
+  margin: auto;
 }

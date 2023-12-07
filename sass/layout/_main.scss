@@ -45,8 +45,15 @@ main {
     padding: 3.12rem 11.25rem;
     margin: 0;
   }
+  @media (min-width: 1441px) {
+    padding: 3.12rem 0;
+  }
   & h2 {
     padding: 0 0 1.63rem 0.5rem;
+    @media (min-width: 1441px) {
+      max-width: 80rem;
+      margin: auto;
+    }
   }
 
   &__cards {
@@ -54,6 +61,10 @@ main {
       @include flex-row-center;
       gap: 2.28rem;
       width: 100%;
+      @media (min-width: 1441px) {
+        max-width: 80rem;
+        margin: auto;
+      }
     }
   }
 
@@ -76,6 +87,10 @@ main {
       gap: 1.3rem;
       margin-left: 0;
     }
+    @media (min-width: 1441px) {
+      max-width: 20rem;
+      margin: auto;
+    }
   }
   &_card p {
     width: auto;
@@ -95,10 +110,10 @@ main {
 
   & .fa-mobile-screen-button {
     @extend %accueil-icone;
-    margin-left: 1rem;
   }
   & .fa-list-ul {
     @extend %accueil-icone;
+    margin-left: 1rem;
   }
   & .fa-store {
     @extend %accueil-icone;
@@ -119,6 +134,10 @@ main {
     @media (min-width: 768px) {
       padding-left: 0;
     }
+    @media (min-width: 1441px) {
+      max-width: 80rem;
+      margin: auto;
+    }
   }
   &__cards {
     @extend %flex-column-center;
@@ -129,8 +148,6 @@ main {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      margin-bottom: 1.88rem;
-      gap: 6.25rem;
       & :nth-child(1) {
         grid-column: 1/2;
         grid-row: 1/2;
@@ -147,6 +164,13 @@ main {
         grid-column: 2/3;
         grid-row: 2/3;
       }
+      &-marginBottom {
+        margin-bottom: 1.88rem;
+      }
+    }
+    @media (min-width: 1441px) {
+      max-width: 80rem;
+      margin: auto;
     }
     &-card {
       width: 90%;
@@ -159,7 +183,6 @@ main {
       @media (min-width: 768px) {
         width: 100%;
         max-width: 34rem;
-        margin-bottom: -3.13rem;
       }
     }
     & p {

@@ -38,7 +38,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    transition: width 1s ease-in-out;
+    transition: width 750ms ease-in-out;
     &-strong {
       font-family: $text-font;
       font-size: 1.125rem;
@@ -57,7 +57,7 @@
     font-family: $text-font;
     font-size: 0.94rem;
     font-weight: 700;
-    transition: margin 1s ease-in-out;
+    transition: margin 750ms ease-in-out;
   }
 }
 
@@ -73,7 +73,7 @@
   align-items: center;
   border-radius: 0 0.94rem 0.94rem 0rem;
   background: #99e2d0;
-  transition: transform 1s ease-in-out;
+  transition: transform 750ms ease-in-out;
   transform: translateX(0);
 
   &::after {
@@ -90,7 +90,7 @@
     border-radius: 50% 50%;
     background: white;
     color: #99e2d0;
-    animation: spinningOut 1s ease-out;
+    animation: spinningOut 750ms ease-out;
   }
 }
 

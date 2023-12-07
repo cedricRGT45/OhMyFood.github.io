@@ -15,7 +15,6 @@ main {
   min-height: 20.13rem;
   margin-bottom: -7.5%;
   overflow: hidden;
-  object-fit: cover;
   @media (min-width: 768px) {
     min-height: 23.93rem;
     margin-bottom: -5%;
@@ -58,6 +57,9 @@ main {
     @media (min-width: 768px) {
       min-height: 23.93rem;
       bottom: -10rem;
+    }
+    @media (min-width: 1441px) {
+      bottom: -30rem;
     }
   }
 }
