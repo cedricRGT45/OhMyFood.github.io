@@ -107,10 +107,6 @@
   // Disparition du coeur outlined au clic
 
   input:checked {
-    & + .Heart__likeButton .fa-heart {
-      animation: fadeOut 700ms forwards;
-    }
-
     //Apparition du coeur filled
 
     & + .Heart__likeButton::after {
