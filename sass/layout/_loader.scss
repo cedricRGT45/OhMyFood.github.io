@@ -6,7 +6,6 @@
 /* loader */
 
 .loader {
-  display: none;
   @extend %flex-row-center;
   position: fixed;
   left: 0;
@@ -29,7 +28,7 @@
     font-size: 2rem;
     color: #9356dc;
     letter-spacing: 1rem;
-    animation: flash 3000ms, crescendo 3000ms;
+    animation: flash 2500ms, crescendo 2500ms;
     @media (min-width: 768px) {
       font-size: 5rem;
     }
