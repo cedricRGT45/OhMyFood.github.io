@@ -542,9 +542,7 @@ main {
 }
 
 .hidden {
-  position: absolute;
-  width: 0px;
-  height: 0px;
+  display: none;
 }
 
 /*Permet à la page de descendre progressivement plutot que de sauter
