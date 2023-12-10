@@ -6,16 +6,11 @@ html {
 }
 
 /* inclus les bordures pour les dimensions */
-
+/* reset toutes les marges et padding pour un comportement cohérent */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* reset toutes les marges et padding pour un comportement cohérent */
-
-* {
   margin: 0;
   padding: 0;
   font: inherit;

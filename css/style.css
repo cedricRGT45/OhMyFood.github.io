@@ -54,12 +54,10 @@
   }
 }
 @keyframes heartBtn-outlines-fading {
-  0%,
-  50% {
+  0%, 50% {
     opacity: 1;
   }
-  70%,
-  100% {
+  70%, 100% {
     opacity: 0;
   }
 }
@@ -170,34 +168,24 @@ p {
   font-weight: 100;
 }
 
-.btn,
-.fonctionnement__card,
-.fonctionnement__card-number,
-.restaurants__cards-content,
-.header__location,
-.loader,
-.loader__lettre {
+.btn, .fonctionnement__card, .fonctionnement__card-number, .restaurants__cards-content, .header__location, .loader, .loader__lettre {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.intro-content,
-.restaurants__cards,
-.header {
+.intro-content, .restaurants__cards, .header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footer__nav-link,
-.menus__titleBar {
+.footer__nav-link, .menus__titleBar {
   display: flex;
   justify-content: flex-start;
 }
 
-.footer,
-.menus {
+.footer, .menus {
   display: flex;
   flex-direction: column;
 }
@@ -206,24 +194,20 @@ p {
   margin: 3.56rem 1.25rem;
 }
 
-.fonctionnement .fa-mobile-screen-button,
-.fonctionnement .fa-list-ul,
-.fonctionnement .fa-store {
+.fonctionnement .fa-mobile-screen-button, .fonctionnement .fa-list-ul, .fonctionnement .fa-store {
   width: 0.81rem;
   height: 1.24rem;
   color: #7e7e7e;
   margin-left: 1rem;
 }
 
-.footer__title,
-.menus__titleBar-title {
+.footer__title, .menus__titleBar-title {
   font-family: "Shrikhand", serif;
   font-size: 1.12rem;
   font-weight: 400;
 }
 
-.btn,
-.restaurants__cards-card {
+.btn, .restaurants__cards-card {
   cursor: pointer;
 }
 
@@ -570,14 +554,11 @@ html {
 }
 
 /* inclus les bordures pour les dimensions */
+/* reset toutes les marges et padding pour un comportement cohérent */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* reset toutes les marges et padding pour un comportement cohérent */
-* {
   margin: 0;
   padding: 0;
   font: inherit;
@@ -687,7 +668,6 @@ a {
   font: var(--fa-font-solid);
   -webkit-font-smoothing: antialiased;
   -webkit-background-clip: text;
-  background-clip: text; /*property for compatibility*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -919,12 +899,7 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(255, 255, 255, 0.15) 100%
-    ),
-    linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transition: opacity 250ms;
@@ -976,7 +951,6 @@ main {
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-font-smoothing: antialiased;
   -webkit-background-clip: text;
-  background-clip: text; /*property for compatibility*/
   -webkit-text-fill-color: transparent;
 }
 .Heart__likeButton .fa-heart {
@@ -996,4 +970,4 @@ main {
 }
 .Heart input:not(:checked) + .Heart__likeButton .fa-heart {
   animation: fadeIn 300ms ease-in forwards;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
