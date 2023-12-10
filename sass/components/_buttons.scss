@@ -91,11 +91,9 @@
     font-size: 1.37rem;
   }
 
-  // Disparition du coeur outlined au clic
+  //Apparition du coeur filled
 
   input:checked {
-    //Apparition du coeur filled
-
     & + .Heart__likeButton::after {
       animation: fadeIn 300ms ease-in forwards;
     }
@@ -105,7 +103,7 @@
 
   input:not(:checked) {
     & + .Heart__likeButton::after {
-      animation: spinningOut 700ms ease-out;
+      animation: spinningOut 300ms ease-out;
     }
     & + .Heart__likeButton .fa-heart {
       animation: fadeIn 300ms ease-in forwards;

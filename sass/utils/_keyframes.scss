@@ -111,15 +111,15 @@
 
 @keyframes spinningOut {
   0% {
-    transform: scale(1) rotate(0deg);
+    transform: rotate(0deg) scale(1);
     opacity: 1;
   }
   10% {
+    transform: rotate(200deg) scale(0.75);
     opacity: 0.75;
-    transform: scale(0.75);
   }
   100% {
-    transform: scale(0.3) rotate(360deg);
+    transform: rotate(360deg) scale(0.3);
     opacity: 0;
   }
 }
