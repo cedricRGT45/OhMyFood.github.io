@@ -1,3 +1,5 @@
+![Ohmyfood Logo](assets/images/logo/ohmyfood.png)
+
 # Ohmyfood Paris - Web Development Project
 
 Welcome to the GitHub repository for the Ohmyfood Paris project! This project was undertaken as part of my training as a junior web developer. The goal was to create a "mobile-first" website for the startup Ohmyfood, allowing users to compose their menu in gourmet restaurants and thus reduce their wait time.
