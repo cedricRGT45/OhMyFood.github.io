@@ -1,12 +1,16 @@
-![Ohmyfood Logo](assets/images/logo/ohmyfood.png)
-
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="assets/images/logo/logo-light.png">
+ <source media="(prefers-color-scheme: light)" srcset="assets/images/logo/ohmyfood.png">
+ <img alt="Logo de ohmyfood" src="assets/images/logo/ohmyfood.png">
+</picture>
 
 
 # Ohmyfood Paris - Web Development Project
 
-<span style="background-color: #99E2D0; color: #000; font-family: 'Roboto', sans-serif; padding: 10px;">Table of Contents</span>
 
 Welcome to the GitHub repository for the Ohmyfood Paris project! This project was undertaken as part of my training as a junior web developer. The goal was to create a "mobile-first" website for the startup Ohmyfood, allowing users to compose their menu in gourmet restaurants and thus reduce their wait time.
+
+Retrouvez la version en ligne ici: [GitHub Pages](https://cedricrgt45.github.io/ohmyfood.github.io/)
 
 ## Table of Contents
 
